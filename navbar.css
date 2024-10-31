@@ -6,13 +6,19 @@ body {
 	margin: 0;
 }
 .navbar {
+	width: 100%;
 	background-color: teal;
 	display: inline-block;
-	justify-content: right;
 	position: sticky;
 	top: 0;
 	ul {
 		float: right;
+	}
+	img {
+		margin-top: 4px;
+		margin-left: 4px;
+		height: 40px;
+		background-color: greenyellow;
 	}
 }
 
@@ -23,37 +29,37 @@ body {
 	display: flex;
 	justify-content: right;
 	width: min-content;
-	gap: 10px;
+	gap: 0.7rem;
 	:first-child {
-		border-radius: 0 0 15px 15px;
+		border-radius: 0 0 1rem 1rem;
 	}
 }
 
 .selected {
-	border-bottom: greenyellow solid 10px;
+	border-bottom: greenyellow solid 0.6rem;
 }
 
 .navbar ul li {
 	background-color: #f2f2f2;
-	padding: 3px 10px;
-	width: 120px;
+	padding: 1.5vh 2vh;
+	width: 10vw;
 	text-align: center;
 	transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .animate {
-	animation: lift 0.5s forwards; /* Adjusted keyframe name */
+	animation: lift 0.5s forwards;
 	cursor: pointer;
 }
 
 @keyframes lift {
 	from {
-		transform: scale(1); /* Starts at normal size */
-		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
+		transform: scale(1);
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
 	to {
-		transform: scale(1.1); /* Slightly enlarges the element */
-		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Shadow to simulate lift */
+		transform: scale(1.1);
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 	}
 }
 
