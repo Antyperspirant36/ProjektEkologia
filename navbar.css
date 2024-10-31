@@ -1,54 +1,66 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
 	margin: 0;
 }
-
+.navbar {
+	background-color: teal;
+	display: flex;
+	justify-content: right;
+}
 .navbar ul {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
 	display: flex;
-	justify-content: center;
+	justify-content: right;
+	width: min-content;
+	gap: 3px;
+	:first-child {
+		border-radius: 0 0 15px 15px;
+	}
 }
 
 .selected {
-	border-bottom: greenyellow solid 5px;
+	border-bottom: greenyellow solid 10px;
 }
+
 .navbar ul li {
 	background-color: white;
 	padding: 20px;
 	width: 70px;
 	text-align: center;
-	transition: transform 0.5s ease;
-}
-
-.navbar ul li .cos {
-	transform: translateY(10px);
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .animate {
-	cursor: pointer;
-	animation: movedown 0.5s forwards;
+	animation: lift 0.5s forwards; /* Adjusted keyframe name */
 }
 
-@keyframes movedown {
+@keyframes lift {
 	from {
-		transform: translateY(0px);
+		transform: scale(1); /* Starts at normal size */
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
 	}
 	to {
-		transform: translateY(10px);
+		transform: scale(1.1); /* Slightly enlarges the element */
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Shadow to simulate lift */
 	}
 }
 
 .animateup {
-	cursor: pointer;
-	animation: moveup 0.5s forwards;
+	animation: drop 0.5s forwards;
 }
 
-@keyframes moveup {
+@keyframes drop {
 	from {
-		transform: translateY(10px);
+		transform: scale(1.1);
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 	}
 	to {
-		transform: translateY(0px);
+		transform: scale(1);
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
 }
