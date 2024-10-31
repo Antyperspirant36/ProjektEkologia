@@ -21,7 +21,6 @@ body {
 	gap: 10px;
 	position: sticky;
     top: 0;
-    overflow: hidden;
 	:first-child {
 		border-radius: 0 0 15px 15px;
 	}
