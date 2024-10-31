@@ -26,6 +26,7 @@ body {
 }
 
 .animate {
+	cursor: pointer;
 	animation: movedown 0.5s forwards;
 }
 
@@ -39,6 +40,7 @@ body {
 }
 
 .animateup {
+	cursor: pointer;
 	animation: moveup 0.5s forwards;
 }
 
