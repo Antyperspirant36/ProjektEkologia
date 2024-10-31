@@ -10,6 +10,7 @@ body {
 	display: flex;
 	justify-content: right;
 }
+
 .navbar ul {
 	padding: 0;
 	margin: 0;
