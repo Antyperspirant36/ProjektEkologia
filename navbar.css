@@ -9,7 +9,8 @@ body {
 	background-color: teal;
 	display: inline-block;
 	justify-content: right;
-
+	position: sticky;
+	top: 0;
 	ul {
 		float: right;
 	}
@@ -23,8 +24,6 @@ body {
 	justify-content: right;
 	width: min-content;
 	gap: 10px;
-	position: sticky;
-    top: 0;
 	:first-child {
 		border-radius: 0 0 15px 15px;
 	}
