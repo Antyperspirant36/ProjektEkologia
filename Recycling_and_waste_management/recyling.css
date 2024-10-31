@@ -24,3 +24,23 @@ body {
     background-color: #f2f2f2;
     padding: 70px 60px 70px 60px;
 }
+
+.animation{
+    background-image: url("images/truck.png") no-repeat;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    animation: animationMove 5s infinite;
+}
+
+@keyframes animationMove {
+    from 0%{
+        justify-content: left;
+    }
+    50%{
+        justify-content: center;
+    }
+    to{
+        justify-content: right;
+    }
+}
