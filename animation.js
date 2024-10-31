@@ -1,10 +1,14 @@
-const navbarbutton = document.getElementsByClassName("siteanother");
+document.querySelectorAll('.siteanother').forEach((element) => {
+    element.addEventListener('mouseover', () => {
+        element.classList.add('animate', 'cos');
+    });
 
-navbarbutton.array.forEach(button => {
-    button.addEventListener('mouseover', () => {
-		button.classList.add('animate');
-	});
-	button.addEventListener('animationend', () => {
-		button.classList.remove('animate');
-	});
+    element.addEventListener('mouseleave', () => {
+        element.classList.remove('animate'); 
+        element.classList.add('animateup'); 
+
+        element.addEventListener('animationend', () => {
+            element.classList.remove('cos', 'animateup');
+        }, { once: true });
+    });
 });

@@ -10,27 +10,43 @@ body {
 	justify-content: center;
 }
 
+.selected {
+	border-bottom: greenyellow solid 5px;
+}
 .navbar ul li {
 	background-color: white;
 	padding: 20px;
 	width: 70px;
 	text-align: center;
-	transform: 5s;
+	transition: transform 0.5s ease;
 }
 
-.navbar .selected {
-	border-bottom: greenyellow solid 5px;
+.navbar ul li .cos {
+	transform: translateY(10px);
 }
 
 .animate {
-	animation: movedown 1.5s;
+	animation: movedown 0.5s forwards;
 }
 
 @keyframes movedown {
-	0% {
-		transform: skewY(0px);
+	from {
+		transform: translateY(0px);
 	}
-	100% {
-		transform: skewY(10px);
+	to {
+		transform: translateY(10px);
+	}
+}
+
+.animateup {
+	animation: moveup 0.5s forwards;
+}
+
+@keyframes moveup {
+	from {
+		transform: translateY(10px);
+	}
+	to {
+		transform: translateY(0px);
 	}
 }
