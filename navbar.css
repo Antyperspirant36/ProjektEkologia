@@ -7,8 +7,12 @@ body {
 }
 .navbar {
 	background-color: teal;
-	display: flex;
+	display: inline-block;
 	justify-content: right;
+
+	ul {
+		float: right;
+	}
 }
 
 .navbar ul {
