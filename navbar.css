@@ -17,7 +17,7 @@ body {
 	display: flex;
 	justify-content: right;
 	width: min-content;
-	gap: 3px;
+	gap: 10px;
 	:first-child {
 		border-radius: 0 0 15px 15px;
 	}
