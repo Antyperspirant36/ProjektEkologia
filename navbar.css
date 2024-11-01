@@ -7,10 +7,10 @@ body {
 }
 .navbar {
 	width: 100%;
+	height: 7vh;
 	background-color: teal;
-	display: inline-block;
-	position: sticky;
-	top: 0;
+	display: flex;
+	justify-content: flex-end;
 	ul {
 		float: right;
 	}
