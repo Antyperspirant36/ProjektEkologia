@@ -1,42 +1,35 @@
 * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden; /* Ukrycie przewijania poziomego */
+    background-color: #f2f2f2;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
 }
 
 .main {
     background-color: #f2f2f2;
     padding: 70px 60px;
-    width: 70%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden; /* Ukrycie nadmiaru animacji */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .animation {
     background-image: url("images/truck.png");
     background-repeat: no-repeat;
-    width: 10%; /* Zmniejszenie szerokości, aby nie wychodziła poza kontener */
-    height: 12%;
-    position: absolute;
-    left: 0;
-    animation: animationMove 13s infinite linear;
+    width: 100px; /* Szerokość obrazka */
+    height: 100px; /* Wysokość obrazka */
+    position: relative;
+    overflow: hidden;
+    animation: animationMove 12s infinite linear;
 }
 
 .trash {
@@ -52,20 +45,20 @@ html, body {
 @keyframes animationMove {
     0% {
         left: 0;
-        top: 30px;
     }
     25% {
-        left: 25%;
+        left: 25%; /* Przesunięcie do lewej krawędzi */
+        transform: scale(1.1,1.1);
     }
     50% {
-        left: 50%;
-        transform: scale(1.1);
+        left: 50%; /* Przesunięcie do środka */
+        transform: scale(1.2,1.1);
     }
     75% {
-        left: 75%;
+        left: 75%; /* Przesunięcie do prawej krawędzi */
+        transform: scale(1.1,1.1);
     }
     100% {
-        left: 100%;
-        top: 30px;
+        left: 100%; /* Przesunięcie do prawej krawędzi */
     }
 }

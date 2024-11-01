@@ -7,27 +7,25 @@ body {
 }
 .navbar {
 	width: 100%;
-	background-color: teal;
-	display: inline-block;
+	height: 8vh;
+	background-color: #2f2f2f;
 	position: sticky;
-	top: 0;
+	img {
+		padding-left: 2px;
+		padding-top: 2px;
+		height: 43.88px;
+		display: inline-block;
+	}
 	ul {
 		float: right;
-	}
-	img {
-		margin-top: 4px;
-		margin-left: 4px;
-		height: 40px;
-		background-color: greenyellow;
 	}
 }
 
 .navbar ul {
+	display: flex;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	display: flex;
-	justify-content: right;
 	width: min-content;
 	gap: 0.7rem;
 	:first-child {
@@ -41,9 +39,11 @@ body {
 
 .navbar ul li {
 	background-color: #f2f2f2;
-	padding: 1.5vh 2vh;
-	width: 10vw;
+	padding: 1.5vh 1.5vh;
+	min-width: 10vw;
+	max-width: 20vw;
 	text-align: center;
+	text-wrap: pretty;
 	transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -58,7 +58,7 @@ body {
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
 	to {
-		transform: scale(1.1);
+		transform: scale(1.05);
 		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 	}
 }
@@ -70,11 +70,17 @@ body {
 
 @keyframes drop {
 	from {
-		transform: scale(1.1);
+		transform: scale(1.05);
 		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 	}
 	to {
 		transform: scale(1);
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
+}
+
+footer {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
 }
