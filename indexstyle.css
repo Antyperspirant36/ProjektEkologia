@@ -1,37 +1,51 @@
 body {
-	margin: 0;
-	background-color: #f2f2f2;
+    margin: 0;
+    background-color: #f2f2f2;
 }
 h3 {
-	margin: 0;
+    margin: 0;
 }
 #aboutUS {
-	min-height: 15vw;
-	max-width: 27.5vw;
-	float: left;
-	background-color: greenyellow;
+	min-height: 12vh;
+    max-width: 27.5vw;
+    float: left;
+    background-color: greenyellow;
 
-	padding: 2vw 2vh;
-	border-radius: 0 0 2rem 0;
-	border: 0.5vw #2f2f2f solid;
-	border-top: 0;
-	border-left: 0;
+    padding: 2vw 2vh;
+    border-radius: 0 0 2rem 0;
+    border: 0.5vw #2f2f2f solid;
+    border-top: 0;
+    border-left: 0;
 
-	font-size: 1.5vw;
-	color: #2f2f2f;
+    font-size: 1.5vw;
+    color: #2f2f2f;
 }
 #ourMISSION {
-	min-height: 15vw;
-	max-width: 27.5vw;
-	float: right;
-	background-color: greenyellow;
+    min-height: 12vh;
+    max-width: 27.5vw;
+    float: right;
+    background-color: greenyellow;
 
-	padding: 2vw 2vh;
-	border-radius: 0 0 0 2rem;
-	border: 0.5vw #2f2f2f solid;
-	border-top: 0;
-	border-right: 0;
+    padding: 2vw 2vh;
+    border-radius: 0 0 0 2rem;
+    border: 0.5vw #2f2f2f solid;
+    border-top: 0;
+    border-right: 0;
 
-	font-size: 1.5vw;
-	color: #2f2f2f;
+    font-size: 1.5vw;
+    color: #2f2f2f;
+}
+#aboutTHESITE {
+    min-height: 12vh;
+    max-width: 27.5vw;
+    margin: auto;
+	margin-top: 25vh;
+    background-color: greenyellow;
+
+    padding: 2vw 2vh;
+    border-radius: 2rem;
+    border: 0.5vw #2f2f2f solid;
+
+    font-size: 1.5vw;
+    color: #2f2f2f;
 }
