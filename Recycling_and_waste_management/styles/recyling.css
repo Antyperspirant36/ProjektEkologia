@@ -21,9 +21,9 @@ html, body {
 
 .main {
     background-color: #f2f2f2;
-    padding: 40px 60px; /* Zmniejsz padding z 70px na 40px */
+    padding: 40px; /* Zmniejsz padding z 70px na 40px */
     width: 70%;
-    min-height: 100vh; /* Zmień height na min-height */
+    min-height: 10vh;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -43,6 +43,7 @@ html, body {
     opacity: 0;
     animation: animationMove 15s infinite linear, fadeIn 1s forwards;
     border: 1px solid black;
+    cursor: default;
 }
 
 .recycling-text {
@@ -88,5 +89,17 @@ html, body {
 }
 
 .content {
+    width: 77%;
     border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    margin-top: 30px;
+}
+.content h2, h3{
+    padding: 20px 0 15px 5px;
+
 }

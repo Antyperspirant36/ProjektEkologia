@@ -15,6 +15,7 @@ body {
 		margin-top: 0.7vw;
 		height: 2.9vw;
 		display: inline-block;
+		cursor: pointer;
 	}
 	ul {
 		float: right;
