@@ -3,18 +3,21 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/images/logo.png">
+		<link rel="icon" type="image/x-icon" href="/images/logo.png" />
 		<title>Monitor jakości powietrza</title>
 		<script src="/animation.js" defer></script>
+		<script src="scripts/airquality.js"></script>
+		<script src="scripts/dataBaseScript.js"></script>
 		<link rel="stylesheet" href="/navbar.css" />
+		<link rel="stylesheet" href="styles/airquality.css" />
 	</head>
 	<body>
 		<nav class="navbar">
 			<img src="/images/logo.png" />
 			<ul>
-				<a><li class="siteanother">Strona Główna</li></a>
-				<a><li class="siteanother selected">Jakość Powietrza</li></a>
-				<a><li class="siteanother">cccc</li></a>
+				<a href="/index.html"><li class="siteanother">Strona Główna</li></a>
+				<a href="#"><li class="siteanother selected">Jakość Powietrza</li></a>
+				<a href="/Recycling_and_waste_management/recyling.html"><li class="siteanother">Recykling</li></a>
 				<a><li class="siteanother">dddd</li></a>
 				<a><li class="siteanother">eeee</li></a>
 				<a><li class="siteanother">ffff</li></a>
@@ -23,13 +26,14 @@
 		<!--Div contains the title, logo, and basic navigation-->
 		<div>
 			<h1>Monitor jakości powietrza</h1>
+			<div class="output"></div>
 		</div>
 
 		<!--Div contains the main content of the page-->
 		<div class="main">
 			<button onclick="makeGet()">Get Request</button>
 		</div>
-		<script src="airquality.js"></script>
+		<script src="/airquality/scripts/airquality.js"></script>
 		<footer>
 			<a
 				href="https://pl.freepik.com/ikona/hipoalergiczny_4343634#fromView=search&page=1&position=39&uuid=5f46ebcb-2f52-4402-905d-bfc58faa23a9"
