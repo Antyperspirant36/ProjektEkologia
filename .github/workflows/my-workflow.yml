@@ -20,8 +20,5 @@ jobs:
       - name: Install Dependencies
         run: npm install  # Install your project's dependencies
 
-      - name: Install Fetch
-        run: npm install node-fetch  # Install your project's dependencies
-        
       - name: Run Your Script
         run: node src/server.js  # Adjust the path accordingly
