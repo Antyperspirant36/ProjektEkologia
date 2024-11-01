@@ -7,24 +7,21 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest  # Use the latest version of Ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2  # Checks out your repository code
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Specify the Node.js version
+          node-version: '14'
+
+      - name: Change to src directory
+        run: cd src  # Change to the directory containing package.json
 
       - name: Install Dependencies
         run: npm install  # Install your project's dependencies
-        
-      - name: Check Node.js Version
-        run: node -v
-
-      - name: List Installed Packages
-        run: npm list
 
       - name: Run Your Script
-        run: node src/server.js  # Adjust the path accordingly
+        run: node server.js  # Adjust the path accordingly
