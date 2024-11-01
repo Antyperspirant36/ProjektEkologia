@@ -6,14 +6,13 @@ h3 {
 	margin: 0;
 }
 #aboutUS {
-	max-height: 35vh;
-	min-width: 20vw;
-	max-width: 25vw;
+	min-height: 15vw;
+	max-width: 27.5vw;
 	float: left;
 	background-color: greenyellow;
 
-	padding: 3vw 3vh;
-	border-radius: 0 0 5vw 0;
+	padding: 2vw 2vh;
+	border-radius: 0 0 2rem 0;
 	border: 0.5vw #2f2f2f solid;
 	border-top: 0;
 	border-left: 0;
@@ -22,14 +21,13 @@ h3 {
 	color: #2f2f2f;
 }
 #ourMISSION {
-	max-height: 35vh;
-	min-width: 20vw;
-	max-width: 25vw;
+	min-height: 15vw;
+	max-width: 27.5vw;
 	float: right;
 	background-color: greenyellow;
 
-	padding: 3vw 3vh;
-	border-radius: 0 0 0 5vw;
+	padding: 2vw 2vh;
+	border-radius: 0 0 0 2rem;
 	border: 0.5vw #2f2f2f solid;
 	border-top: 0;
 	border-right: 0;
