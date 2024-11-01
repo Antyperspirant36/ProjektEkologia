@@ -1,6 +1,6 @@
 Projekt Ekologia
 
-Jest to projekt w ramach konkrusu "Hack Heroes", ma na celu budowe świadomości o ekologii, dbaniu o środowisko, poziomach dwutlenku węgla itp.
+Jest to projekt w ramach konkrusu "Hack Heroes 2024", ma na celu budowe świadomości o ekologii, dbaniu o środowisko, poziomach dwutlenku węgla itp.
 
 ## Opis
 
