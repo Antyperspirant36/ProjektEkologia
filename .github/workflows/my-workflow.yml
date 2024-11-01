@@ -19,6 +19,9 @@ jobs:
 
               - name: Install Dependencies
                 run: npm install # Install your project's dependencies
+                
+              - name: List Files
+                run: ls -la
 
               - name: Run Your Script
                 run: node src/server.js # Adjust the path accordingly
