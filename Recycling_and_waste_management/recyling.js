@@ -1,4 +1,4 @@
-const truck = document.getElementById("truck");
+const truck = document.getElementById("truck1");
 const trashItems = document.querySelectorAll(".trash");
 
 // Funkcja do sprawdzania kolizji
