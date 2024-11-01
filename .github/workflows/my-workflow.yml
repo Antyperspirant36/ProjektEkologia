@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main  # Change this to your default branch if different
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour; adjust as needed
 
 jobs:
   run-script:
@@ -23,4 +21,4 @@ jobs:
         run: npm install  # Install your project's dependencies
 
       - name: Run Your Script
-        run: node your-script.js  # Replace with the name of your script
+        run: node src/your-script.js  # Adjust the path accordingly
