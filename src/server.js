@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/server.js
 // Fetching data using the built-in http module
 const http = require('http');
 
@@ -28,3 +29,21 @@ req.on('error', (error) => {
 
 // End the request
 req.end();
+=======
+// Replace with your deployed proxy server URL
+const url = 'https://your-proxy-server.com/api/station/findAll';
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Sensor Data:', data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+>>>>>>> a34871573c6f6942c7ecfe1b06275eaf422f7d62:server.js

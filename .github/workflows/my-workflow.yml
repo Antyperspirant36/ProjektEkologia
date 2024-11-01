@@ -21,4 +21,4 @@ jobs:
         run: npm install  # Install your project's dependencies
 
       - name: Run Your Script
-        run: node src/your-script.js  # Adjust the path accordingly
+        run: node src/server.js  # Adjust the path accordingly
