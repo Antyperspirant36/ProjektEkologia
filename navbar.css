@@ -1,51 +1,52 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: content-box;
 }
 
 body {
-  margin: 0;
+	margin: 0;
 }
 .navbar {
-  width: 100%;
-  height: 4.3vw;
-  background-color: #2f2f2f;
-  img {
-    margin-left: 0.7vw;
-    margin-top: 0.7vw;
-    height: 2.9vw;
-    display: inline-block;
-  }
-  ul {
-    float: right;
-  }
+	width: 100%;
+	height: 4.3vw;
+	background-color: #2f2f2f;
+	img {
+		margin-left: 0.7vw;
+		margin-top: 0.7vw;
+		height: 2.9vw;
+		display: inline-block;
+	}
+	ul {
+		float: right;
+	}
 }
 
 .navbar ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  width: min-content;
-  gap: 0.7rem;
-  :first-child {
-    border-radius: 0 0 1rem 1rem;
-  }
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: min-content;
+	gap: 0.7rem;
+	:first-child {
+		border-radius: 0 0 1rem 1rem;
+	}
 }
 
 .selected {
-  border-bottom: greenyellow solid 0.5vw;
+	border-bottom: greenyellow solid 0.5vw;
 }
 
 .navbar ul li {
-  font-size: 1vw;
-  background-color: #f2f2f2;
-  padding: 0.8vw 1vw;
-  min-width: 10vw;
-  max-width: 20vw;
-  height: 1.5vw;
-  text-align: center;
-  text-wrap: pretty;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+	font-size: 1vw;
+	background-color: #f2f2f2;
+	padding: 0.8vw 1vw;
+	min-width: 10vw;
+	max-width: 20vw;
+	height: 1.5vw;
+	text-align: center;
+	text-wrap: pretty;
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .navbar ul a{
   text-decoration: none;
@@ -53,39 +54,39 @@ body {
 }
 
 .animate {
-  animation: lift 0.5s forwards;
-  cursor: pointer;
+	animation: lift 0.5s forwards;
+	cursor: pointer;
 }
 
 @keyframes lift {
-  from {
-    transform: scale(1);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  }
-  to {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-  }
+	from {
+		transform: scale(1);
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+	to {
+		transform: scale(1.05);
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+	}
 }
 
 .animateup {
-  cursor: pointer;
-  animation: drop 0.5s forwards;
+	cursor: pointer;
+	animation: drop 0.5s forwards;
 }
 
 @keyframes drop {
-  from {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-  }
-  to {
-    transform: scale(1);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  }
+	from {
+		transform: scale(1.05);
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+	}
+	to {
+		transform: scale(1);
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
 }
 
 footer {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
 }
