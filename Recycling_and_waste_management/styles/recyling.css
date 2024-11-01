@@ -51,7 +51,7 @@ html, body {
     top: 40px;
     left: -200px;
     font-size: 2rem;
-    color: green;
+    color: #5BC980;
     font-weight: bold;
     opacity: 1;
 }
@@ -101,5 +101,5 @@ html, body {
 }
 .content h2, h3{
     padding: 20px 0 15px 5px;
-
+    color: #5BC980;
 }
