@@ -1,27 +1,24 @@
 name: Run Script
 
 on:
-  push:
-    branches:
-      - main  # Change this to your default branch if different
+    push:
+          branches:
+              - main # Change this to your default branch if different
 
 jobs:
-  run-script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    run-script:
+          runs-on: ubuntu-latest # Use the latest version of Ubuntu
+          steps:
+              - name: Checkout Repository
+                uses: actions/checkout@v2 # Checks out your repository code
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+              - name: Set up Node.js
+                uses: actions/setup-node@v2
+                with:
+                      node-version: "14" # Specify the Node.js version
 
-      - name: Change to src directory
-        run: cd src  # Change to the directory containing package.json
+              - name: Install Dependencies
+                run: npm install # Install your project's dependencies
 
-      - name: Install Dependencies
-        run: npm install  # Install your project's dependencies
-
-      - name: Run Your Script
-        run: node server.js  # Adjust the path accordingly
+              - name: Run Your Script
+                run: node src/server.js # Adjust the path accordingly
