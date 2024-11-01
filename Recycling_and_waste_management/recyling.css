@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden; /* Ukrycie przewijania poziomego */
+    background-color: #f2f2f2;
 }
 
 .header {
@@ -15,13 +16,14 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
-    padding: 30px;
+    padding: 30vw;
 }
 
 .main {
     background-color: #f2f2f2;
     padding: 70px 60px;
     width: 70%;
+    height: 100vh;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
