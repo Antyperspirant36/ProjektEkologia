@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,39 +37,48 @@ html, body {
     height: 12%;
     position: absolute;
     left: 0;
-    animation: animationMove 12s infinite linear; /* Zwiększenie czasu, by uwzględnić pauzę */
+    opacity: 0; /* Ustawienie początkowej przezroczystości */
+    animation: animationMove 15s infinite linear, fadeIn 1s forwards;
 }
 
-.trash {
-    background-image: url("images/trash.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 25%;
-    height: 25%;
+.recycling-text {
     position: absolute;
-    top: -50px;
+    top: 40px; /* Dostosuj w zależności od potrzeb */
+    left: -200px; /* Początkowa pozycja */
+    font-size: 2rem; /* Dostosuj rozmiar czcionki */
+    color: green; /* Dostosuj kolor */
+    font-weight: bold; /* Opcjonalnie, aby wyróżnić tekst */
+    opacity: 1; /* Ustawienie początkowej przezroczystości */
 }
 
 /* Animacja poruszania się ciężarówki */
 @keyframes animationMove {
     0% {
-        left: 0;
+        left: -10%;
         top: 30px;
-    }
-    49% {
-        left: 50%;
-    }
-    50% {
-        left: 50%;
-    }
-    51% {
-        left: 50%;
-    }
-    52% {
-        left: 50%;
     }
     100% {
-        left: 100%;
+        left: 115%;
         top: 30px;
+    }
+}
+
+/* Animacja przesuwania napisu */
+@keyframes textMove {
+    0% {
+        left: -20%; /* Zaczyna z lewej strony */
+    }
+    100% {
+        left: 100%; /* Kończy z prawej strony */
+    }
+}
+
+/* Animacja stopniowego pojawiania się */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Początkowo niewidoczny */
+    }
+    100% {
+        opacity: 1; /* Końcowo widoczny */
     }
 }
