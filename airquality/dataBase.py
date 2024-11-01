@@ -3,6 +3,14 @@ import sqlite3
 conn = sqlite3.connect("airquality.db")
 cursor = conn.cursor()
 
+cursor.execute('''CREATE TABLE IF NOT EXISTS airquality (
+                    id INTEGER PRIMARY KEY,
+                    name TEXT,
+                    description TEXT,
+                    price REAL,
+                    category TEXT
+                )''')
+
 airquality = [
     ('Plastik', 'WOWE'),
     ('Papier i tektura', 'WOWE'),
