@@ -1,20 +1,17 @@
-// src/fetchData.js
-const fetch = require("node-fetch");
+// src/server.js
+const fetch = require("node-fetch"); // Import node-fetch
 
-const url = "https://api.gios.gov.pl/pjp-api/v1/rest/station/sensors/52";
+const url = "https://api.gios.gov.pl/pjp-api/v1/rest/station/sensors/52"; // Example URL
 
-async function fetchData() {
-	try {
-		const response = await fetch(url);
+fetch(url).then((response) => {
 		if (!response.ok) {
 			throw new Error("Network response was not ok " + response.statusText);
 		}
-		const data = await response.json();
-		return data; // Return the fetched data
-	} catch (error) {
+		return response.json();
+	})
+	.then((data) => {
+		console.log(data); // Handle the response data
+	})
+	.catch((error) => {
 		console.error("Error fetching data:", error);
-		return null; // Return null or handle the error as needed
-	}
-}
-
-module.exports = fetchData; // Export the fetchData function
+	});
