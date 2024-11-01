@@ -1,6 +1,18 @@
 body {
     margin: 0;
     background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+footer {
+    background-color: #2f2f2f;
+
+    height: 4.3vw;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    a {
+        color: greenyellow;
+    }
 }
 h3 {
     margin: 0;
@@ -16,6 +28,7 @@ h3 {
     border: 0.5vw #2f2f2f solid;
     border-top: 0;
     border-left: 0;
+    box-shadow: 0px 0px 20px #2f2f2f;
 
     font-size: 1.5vw;
     color: #2f2f2f;
@@ -31,6 +44,7 @@ h3 {
     border: 0.5vw #2f2f2f solid;
     border-top: 0;
     border-right: 0;
+    box-shadow: 0px 0px 20px #2f2f2f;
 
     font-size: 1.5vw;
     color: #2f2f2f;
@@ -45,6 +59,7 @@ h3 {
     padding: 2vw 2vh;
     border-radius: 2rem;
     border: 0.5vw #2f2f2f solid;
+    box-shadow: 0px 0px 20px #2f2f2f;
 
     font-size: 1.5vw;
     color: #2f2f2f;
