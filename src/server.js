@@ -1,17 +1,25 @@
-// src/server.js
-const fetch = require("node-fetch"); // Import node-fetch
+const express = require('express');
+const cors = require('cors');
 
-const url = "https://api.gios.gov.pl/pjp-api/v1/rest/station/sensors/52"; // Example URL
+const app = express();
+const PORT = 3000;
 
-fetch(url).then((response) => {
-		if (!response.ok) {
-			throw new Error("Network response was not ok " + response.statusText);
-		}
-		return response.json();
-	})
-	.then((data) => {
-		console.log(data); // Handle the response data
-	})
-	.catch((error) => {
-		console.error("Error fetching data:", error);
-	});
+// Enable CORS for all routes
+app.use(cors());
+
+// Parse JSON bodies for POST requests
+app.use(express.json());
+
+// Sample API endpoint
+app.get('/your-api-endpoint', (req, res) => {
+    const sampleData = {
+        message: "Hello from the server!",
+        timestamp: new Date()
+    };
+    res.json(sampleData);
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

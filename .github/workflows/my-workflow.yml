@@ -19,7 +19,10 @@ jobs:
 
               - name: Install Dependencies
                 run: npm install # Install your project's dependencies
-                
+
+              - name: Instal CORS
+                run: npm install cors
+
               - name: List Files
                 run: ls -la
 
