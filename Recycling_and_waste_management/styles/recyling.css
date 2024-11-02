@@ -1,105 +1,108 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
-    background-color: #f2f2f2;
+html,
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
+	background-color: #f2f2f2;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 20px; /* Zmniejsz padding, aby uniknąć dużej przestrzeni u góry */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+	padding: 20px; /* Zmniejsz padding, aby uniknąć dużej przestrzeni u góry */
 }
 
 .main {
-    background-color: #f2f2f2;
-    padding: 40px; /* Zmniejsz padding z 70px na 40px */
-    width: 70%;
-    min-height: 10vh;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+	background-color: #f2f2f2;
+	padding: 40px; /* Zmniejsz padding z 70px na 40px */
+	width: 70%;
+	min-height: 10vh;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
 }
 
 .animation {
-    background-image: url("images/truck.png");
-    background-repeat: no-repeat;
-    width: 10%;
-    height: 12%;
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    animation: animationMove 15s infinite linear, fadeIn 1s forwards;
-    border: 1px solid black;
-    cursor: default;
+	background-image: url("images/truck.png");
+	background-repeat: no-repeat;
+	width: 10%;
+	height: 12%;
+	position: absolute;
+	left: 0;
+	opacity: 1;
+	animation: animationMove 15s infinite linear, fadeIn 1s forwards;
+	border: 0px solid black;
+	border-radius: 5px;
+	cursor: default;
 }
 
 .recycling-text {
-    position: absolute;
-    top: 40px;
-    left: -200px;
-    font-size: 2rem;
-    color: #5BC980;
-    font-weight: bold;
-    opacity: 1;
+	position: absolute;
+	top: 55px;
+	left: -150px;
+	font-size: 2rem;
+	color: #5bc980;
+	font-weight: bold;
+	opacity: 1;
 }
 
 /* Animacja poruszania się ciężarówki */
 @keyframes animationMove {
-    0% {
-        left: -10%;
-        top: 30px;
-    }
-    100% {
-        left: 115%;
-        top: 30px;
-    }
+	0% {
+		left: -18vw;
+		top: 5vh;
+	}
+	100% {
+		left: 90vw;
+		top: 5vh;
+	}
 }
 
 /* Animacja przesuwania napisu */
 @keyframes textMove {
-    0% {
-        left: -20%;
-    }
-    100% {
-        left: 100%;
-    }
+	0% {
+		left: -20%;
+	}
+	100% {
+		left: 100%;
+	}
 }
 
 /* Animacja stopniowego pojawiania się */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .content {
-    width: 77%;
-    border: 1px solid black;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    font-size: 120%;
-    margin-top: 30px;
+	width: 77%;
+	border: 1px solid black;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	font-size: 120%;
+	margin-top: 30px;
 }
-.content h2, h3{
-    padding: 20px 0 15px 5px;
-    color: #5BC980;
+.content h2,
+h3 {
+	padding: 20px 0 15px 5px;
+	color: #5bc980;
 }
