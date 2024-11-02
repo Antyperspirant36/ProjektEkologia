@@ -93,9 +93,7 @@ h3 {
     color: #2f2f2f;
 }
 #aboutTHESITE:hover {
-    background-color: #2f2f2f;
-    color: teal;
-    border-color: teal;
+    background-color: teal;
 }
 @keyframes moveTHESITE {
     from {transform: translateY(75vh);}
