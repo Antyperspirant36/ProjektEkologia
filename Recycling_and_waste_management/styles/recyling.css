@@ -1,22 +1,23 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
-    background-color: #f2f2f2;
+html,
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
+	background-color: #f2f2f2;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 20px; /* Zmniejsz padding, aby uniknąć dużej przestrzeni u góry */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+	padding: 20px; /* Zmniejsz padding, aby uniknąć dużej przestrzeni u góry */
 }
 
 .main {
@@ -45,45 +46,45 @@ html, body {
 }
 
 .recycling-text {
-    position: absolute;
-    top: 40px;
-    left: -200px;
-    font-size: 2rem;
-    color: #5BC980;
-    font-weight: bold;
-    opacity: 1;
+	position: absolute;
+	top: 55px;
+	left: -150px;
+	font-size: 2rem;
+	color: #5bc980;
+	font-weight: bold;
+	opacity: 1;
 }
 
 /* Animacja poruszania się ciężarówki */
 @keyframes animationMove {
-    0% {
-        left: -10%;
-        top: 30px;
-    }
-    100% {
-        left: 115%;
-        top: 30px;
-    }
+	0% {
+		left: -18vw;
+		top: 5vh;
+	}
+	100% {
+		left: 90vw;
+		top: 5vh;
+	}
 }
 
 /* Animacja przesuwania napisu */
 @keyframes textMove {
-    0% {
-        left: -20%;
-    }
-    100% {
-        left: 100%;
-    }
+	0% {
+		left: -20%;
+	}
+	100% {
+		left: 100%;
+	}
 }
 
 /* Animacja stopniowego pojawiania się */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .description h2{
     color: #5BC980;
