@@ -24,6 +24,7 @@ h3 {
     background-color: greenyellow;
     transition: 0.5s;
     animation: moveUS 1s;
+    cursor: default;
 
     padding: 2vw 2vh;
     border-radius: 0 0 2rem 0;
@@ -37,8 +38,8 @@ h3 {
 }
 #aboutUS:hover {
     background-color: #2f2f2f;
-    color: greenyellow;
-    border-color: greenyellow;
+    color: teal;
+    border-color: teal;
 }
 @keyframes moveUS {
     from {transform: translateX(-100%);}
@@ -51,6 +52,7 @@ h3 {
     background-color: greenyellow;
     transition: 0.5s;
     animation: moveMISSION 1s;
+    cursor: default;
 
     padding: 2vw 2vh;
     border-radius: 0 0 0 2rem;
@@ -64,8 +66,8 @@ h3 {
 }
 #ourMISSION:hover {
     background-color: #2f2f2f;
-    color: greenyellow;
-    border-color: greenyellow;
+    color: teal;
+    border-color: teal;
 }
 @keyframes moveMISSION {
     from {transform: translateX(100%);}
@@ -79,6 +81,7 @@ h3 {
     background-color: greenyellow;
     transition: 0.5s;
     animation: moveTHESITE 1s;
+    cursor: default;
 
     padding: 2vw 2vh;
     border-radius: 2rem;
@@ -91,8 +94,8 @@ h3 {
 }
 #aboutTHESITE:hover {
     background-color: #2f2f2f;
-    color: greenyellow;
-    border-color: greenyellow;
+    color: teal;
+    border-color: teal;
 }
 @keyframes moveTHESITE {
     from {transform: translateY(75vh);}
