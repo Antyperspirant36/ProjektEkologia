@@ -22,7 +22,7 @@ html, body {
 .main {
     background-color: #f2f2f2;
     padding: 40px; /* Zmniejsz padding z 70px na 40px */
-    width: 70%;
+    width: 100%;
     min-height: 10vh;
     margin: 0 auto;
     position: relative;
@@ -41,7 +41,6 @@ html, body {
     left: 0;
     opacity: 0;
     animation: animationMove 15s infinite linear, fadeIn 1s forwards;
-    border: 1px solid black;
     cursor: default;
 }
 
@@ -93,15 +92,15 @@ html, body {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 .Symboles img {
-    width: 6%;
-    height: 6%;
-    margin: 10px;
+    width: 5%;
+    height: 5%;
     transition: all 1.2s;
 }
 .obraz:hover{
@@ -116,8 +115,11 @@ html, body {
     width: 100%;
     height: 100%;
     font-size: 160%;
-    color:#5BC980;
+    color: lightseagreen;
 }
-.description h2,h4{
+#description h2,h4{
     margin: 15px;
+}
+#description{
+    margin-top: 20px;
 }
