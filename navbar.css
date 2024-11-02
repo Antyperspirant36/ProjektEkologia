@@ -87,6 +87,7 @@ body {
 }
 
 footer {
+	margin-top: 150px;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
