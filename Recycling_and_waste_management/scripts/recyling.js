@@ -45,7 +45,7 @@ const dane = [
 ];
 
 function pokaz(x) {
-    document.getElementById("h2").innerHTML = dane[x].kategoria;
+    document.getElementById("h2").innerHTML = `<strong>${dane[x].kategoria}</strong>`;
     document.getElementById("h4").innerHTML = dane[x].opis;
     document.getElementById("h5").innerHTML = dane[x].szczegoly;
 }
