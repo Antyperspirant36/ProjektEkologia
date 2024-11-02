@@ -21,7 +21,7 @@ jobs:
                 run: npm install # Install your project's dependencies
 
               - name: Instal CORS
-                run: npm install cors
+                run: npm install cors express
 
               - name: List Files
                 run: ls -la
