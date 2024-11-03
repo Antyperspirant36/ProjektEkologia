@@ -8,7 +8,33 @@
 </head>
 <body>
     <script>
+        const apiKey = '6f8c6c7c361c24c67487eafa3c9fd48d';
+        const weatherForm = document.querySelector('.weatherForm');
+        const cityInput = document.querySelector('.cityInput');
+        const card = document.querySelector('.card');
 
+        weatherForm.addEventListener('submit', event => {
+
+            event.preventDefault();
+
+            const city = cityInput.value; // 11:38:51
+
+        })
+
+        async function getWeatherData(city){
+
+        }
+        function displayWeatherData(data){
+
+        }
+
+        function getWeatherEmoji(weatherID){
+
+        }
+
+        function displayError(messege){
+
+        }
     </script>
     
     <form class="weatherForm">
@@ -16,12 +42,7 @@
         <button type="submit">Get Weather</button>
     </form>
 
-    <div class="card">
-        <h1 class="cityDisplay">Warszawa</h1>
-        <p class="tempDisplay">30°C</p>
-        <p class="humidityDisplay">30%</p>
-        <p class="descDisplay">Słonecznie</p>
-        
+    <div class="card" style="display: none;">
     </div>
 </body>
 </html>
