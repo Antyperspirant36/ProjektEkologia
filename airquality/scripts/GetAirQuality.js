@@ -72,4 +72,4 @@ async function getCityCoordinates(cityName, stateCode = '', countryCode = '', li
 }
 
 // Wywołanie funkcji do pobrania współrzędnych miasta i jakości powietrza
-getCityCoordinates('Kraków', '', 'Pl');
+getCityCoordinates('Berlin', '', '');
