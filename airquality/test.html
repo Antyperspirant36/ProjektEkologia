@@ -18,10 +18,11 @@
             event.preventDefault();
 
             const city = cityInput.value; // 11:38:51
+            
             if(city){
 
-            }else {
-                displayError("Please enter a city");
+            }else{
+                displayError("Wprowadź miasto");
             }
         })
 
@@ -36,12 +37,12 @@
 
         }
 
-        function displayError(messege){
+        function displayError(message) {
             const errorDisplay = document.createElement("p");
-            errorDisplay.textContent = messege;
+            errorDisplay.textContent = message;
             errorDisplay.classList.add("errorDisplay");
 
-            card.textContent - "";
+            card.textContent = "";
             card.style.display = "flex";
             card.appendChild(errorDisplay);
         }
