@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/test.css">
-    <title>Document</title>
+    <title>Aplikacja do pogody (test)</title>
 </head>
 <body>
     <script>
@@ -18,7 +18,11 @@
             event.preventDefault();
 
             const city = cityInput.value; // 11:38:51
+            if(city){
 
+            }else {
+                displayError("Please enter a city");
+            }
         })
 
         async function getWeatherData(city){
@@ -33,7 +37,13 @@
         }
 
         function displayError(messege){
+            const errorDisplay = document.createElement("p");
+            errorDisplay.textContent = messege;
+            errorDisplay.classList.add("errorDisplay");
 
+            card.textContent - "";
+            card.style.display = "flex";
+            card.appendChild(errorDisplay);
         }
     </script>
     
