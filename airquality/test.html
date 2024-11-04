@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/test.css">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        const apiKey = '6f8c6c7c361c24c67487eafa3c9fd48d';
-        const weatherForm = document.querySelector('.weatherForm');
-        const cityInput = document.querySelector('.cityInput');
-        const card = document.querySelector('.card');
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/test.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const apiKey = "6f8c6c7c361c24c67487eafa3c9fd48d";
+			const weatherForm = document.querySelector(".weatherForm");
+			const cityInput = document.querySelector(".cityInput");
+			const card = document.querySelector(".card");
 
-        weatherForm.addEventListener('submit', event => {
+			weatherForm.addEventListener("submit", (event) => {
+				event.preventDefault();
 
-            event.preventDefault();
+				const city = cityInput.value; // 11:38:51
+			});
 
-            const city = cityInput.value; // 11:38:51
+			async function getWeatherData(city) {}
+			function displayWeatherData(data) {}
 
-        })
+			function getWeatherEmoji(weatherID) {}
 
-        async function getWeatherData(city){
+			function displayError(messege) {}
+		</script>
 
-        }
-        function displayWeatherData(data){
+		<form class="weatherForm">
+			<input type="text" class="cityInput" placeholder="Podaj miasto" />
+			<button type="submit">Get Weather</button>
+		</form>
 
-        }
-
-        function getWeatherEmoji(weatherID){
-
-        }
-
-        function displayError(messege){
-
-        }
-    </script>
-    
-    <form class="weatherForm">
-        <input type="text" class="cityInput" placeholder="Podaj miasto">
-        <button type="submit">Get Weather</button>
-    </form>
-
-    <div class="card" style="display: none;">
-    </div>
-</body>
+		<div class="card" style="display: none"></div>
+	</body>
 </html>
