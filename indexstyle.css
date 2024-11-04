@@ -2,9 +2,10 @@ body {
     margin: 0;
     background-color: #f2f2f2;
     overflow: hidden;
+    --almostblack: #2f2f2f;
 }
 footer {
-    background-color: #2f2f2f;
+    background-color: var(--almostblack);
 
     height: 4.3vw;
     width: 100%;
@@ -17,85 +18,90 @@ footer {
 h3 {
     margin: 0;
 }
-#aboutUS {
-	min-height: 12vh;
-    max-width: 27.5vw;
-    float: left;
-    background-color: greenyellow;
-    transition: 0.5s;
-    animation: moveUS 1s;
-    cursor: default;
 
+.cancelrep {
+    min-height: 12vh;
+    max-width: 27.5vw;
+    background-color: greenyellow;
     padding: 2vw 2vh;
+    cursor: default;
+    font-size: 1.5vw;
+    transition: 0.5s;
+}
+#aboutUS {
+    float: left;
+    animation: moveUS 1s;
     border-radius: 0 0 2rem 0;
-    border: 0.5vw #2f2f2f solid;
+    border: 0.5vw var(--almostblack) solid;
     border-top: 0;
     border-left: 0;
-    box-shadow: 0px 0px 20px #2f2f2f;
+    box-shadow: 0px 0px 20px var(--almostblack);
 
-    font-size: 1.5vw;
-    color: #2f2f2f;
+    color: var(--almostblack);
 }
 #aboutUS:hover {
-    background-color: #2f2f2f;
+    background-color: var(--almostblack);
     color: teal;
     border-color: teal;
 }
 @keyframes moveUS {
-    from {transform: translateX(-100%);}
-    to {transform: translateX(0%);}
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 #ourMISSION {
-    min-height: 12vh;
-    max-width: 27.5vw;
     float: right;
-    background-color: greenyellow;
-    transition: 0.5s;
     animation: moveMISSION 1s;
-    cursor: default;
-
-    padding: 2vw 2vh;
     border-radius: 0 0 0 2rem;
-    border: 0.5vw #2f2f2f solid;
+    border: 0.5vw var(--almostblack) solid;
     border-top: 0;
     border-right: 0;
-    box-shadow: 0px 0px 20px #2f2f2f;
+    box-shadow: 0px 0px 20px var(--almostblack);
 
-    font-size: 1.5vw;
-    color: #2f2f2f;
+    color: var(--almostblack);
 }
 #ourMISSION:hover {
-    background-color: #2f2f2f;
+    background-color: var(--almostblack);
     color: teal;
     border-color: teal;
 }
 @keyframes moveMISSION {
-    from {transform: translateX(100%);}
-    to {transform: translateX(0%);}
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 #aboutTHESITE {
-    min-height: 12vh;
-    max-width: 27.5vw;
     margin: auto;
-	margin-top: 25vh;
-    background-color: greenyellow;
-    transition: 0.5s;
+    margin-top: 25vh;
     animation: moveTHESITE 1s;
-    cursor: default;
-
-    padding: 2vw 2vh;
     border-radius: 2rem;
-    border: 0.5vw #2f2f2f solid;
-    box-shadow: 0px 0px 20px #2f2f2f;
+    border: 0.5vw var(--almostblack) solid;
+    box-shadow: 0px 0px 20px var(--almostblack);
     transform: translateZ(100%);
 
-    font-size: 1.5vw;
-    color: #2f2f2f;
+    color: var(--almostblack);
 }
 #aboutTHESITE:hover {
     background-color: teal;
 }
 @keyframes moveTHESITE {
-    from {transform: translateY(75vh);}
-    to {transform: translateY(0%);}
+    from {
+        transform: translateY(75vh);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cancelrep {
+        font-size: 2.5vw;
+        max-width: 27vw;
+    }
 }
