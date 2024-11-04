@@ -11,6 +11,7 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
+    margin: 0;
     a {
         color: greenyellow;
     }
@@ -27,6 +28,7 @@ h3 {
     cursor: default;
     font-size: 1.5vw;
     transition: 0.5s;
+    color: var(--almostblack);
 }
 #aboutUS {
     float: left;
@@ -36,8 +38,6 @@ h3 {
     border-top: 0;
     border-left: 0;
     box-shadow: 0px 0px 20px var(--almostblack);
-
-    color: var(--almostblack);
 }
 #aboutUS:hover {
     background-color: var(--almostblack);
@@ -60,8 +60,6 @@ h3 {
     border-top: 0;
     border-right: 0;
     box-shadow: 0px 0px 20px var(--almostblack);
-
-    color: var(--almostblack);
 }
 #ourMISSION:hover {
     background-color: var(--almostblack);
@@ -83,9 +81,6 @@ h3 {
     border-radius: 2rem;
     border: 0.5vw var(--almostblack) solid;
     box-shadow: 0px 0px 20px var(--almostblack);
-    transform: translateZ(100%);
-
-    color: var(--almostblack);
 }
 #aboutTHESITE:hover {
     background-color: teal;
@@ -100,8 +95,45 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
+    footer {
+        height: 10vh;
+        a {
+            color: teal;
+        }
+    }
+    h3 {
+        text-align: center;
+    }
     .cancelrep {
-        font-size: 2.5vw;
-        max-width: 27vw;
+        background-color: #f2f2f2;
+        color: teal;
+        box-sizing: border-box;
+        max-width: none;
+        min-height: 23vh;
+        max-height: 25vh;
+        width: 100vw;
+        padding: 1vw 1vh;
+        font-size: 4.5vw;
+    }
+    #aboutUS {
+        float: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1.5vh teal solid;
+    }
+    #ourMISSION {
+        float: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1.5vh teal solid;
+    }
+    #aboutTHESITE {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1.5vh teal solid;
     }
 }
