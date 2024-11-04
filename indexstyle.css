@@ -122,6 +122,11 @@ h3 {
         border: none;
         border-bottom: 1.5vh teal solid;
     }
+    #aboutUS:hover {
+        background-color: greenyellow;
+        color: var(--almostblack);
+        border-color: var(--almostblack);
+    }
     #ourMISSION {
         float: none;
         box-shadow: none;
@@ -129,11 +134,29 @@ h3 {
         border: none;
         border-bottom: 1.5vh teal solid;
     }
+    #ourMISSION:hover {
+        background-color: greenyellow;
+        color: var(--almostblack);
+        border-color: var(--almostblack);
+    }
     #aboutTHESITE {
         margin: 0;
         box-shadow: none;
         border-radius: 0;
         border: none;
         border-bottom: 1.5vh teal solid;
+    }
+    #aboutTHESITE:hover {
+        background-color: greenyellow;
+        color: var(--almostblack);
+        border-color: var(--almostblack);
+    }
+    @keyframes moveTHESITE {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
     }
 }
