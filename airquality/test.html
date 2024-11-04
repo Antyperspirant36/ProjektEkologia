@@ -18,9 +18,8 @@
             event.preventDefault();
 
             const city = cityInput.value; // 11:38:51
-            
+            console.log(city);
             if(city){
-
             }else{
                 displayError("Wprowadź miasto");
             }
@@ -50,7 +49,7 @@
     
     <form class="weatherForm">
         <input type="text" class="cityInput" placeholder="Podaj miasto">
-        <button type="submit">Get Weather</button>
+        <button>Get Weather</button>
     </form>
 
     <div class="card" style="display: none;">
