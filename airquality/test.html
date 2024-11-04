@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/test.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<script>
-			const apiKey = "6f8c6c7c361c24c67487eafa3c9fd48d";
-			const weatherForm = document.querySelector(".weatherForm");
-			const cityInput = document.querySelector(".cityInput");
-			const card = document.querySelector(".card");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/test.css">
+    <title>Aplikacja do pogody (test)</title>
+</head>
+<body>
+    <script>
+        const apiKey = '6f8c6c7c361c24c67487eafa3c9fd48d';
+        const weatherForm = document.querySelector('.weatherForm');
+        const cityInput = document.querySelector('.cityInput');
+        const card = document.querySelector('.card');
 
-			weatherForm.addEventListener("submit", (event) => {
-				event.preventDefault();
+        weatherForm.addEventListener('submit', event => {
 
-				const city = cityInput.value; // 11:38:51
-			});
+            event.preventDefault();
 
-			async function getWeatherData(city) {}
-			function displayWeatherData(data) {}
+            const city = cityInput.value; // 11:38:51
+            
+            if(city){
 
-			function getWeatherEmoji(weatherID) {}
+            }else{
+                displayError("Wprowadź miasto");
+            }
+        })
 
-			function displayError(messege) {}
-		</script>
+        async function getWeatherData(city){
 
-		<form class="weatherForm">
-			<input type="text" class="cityInput" placeholder="Podaj miasto" />
-			<button type="submit">Get Weather</button>
-		</form>
+        }
+        function displayWeatherData(data){
 
-		<div class="card" style="display: none"></div>
-	</body>
+        }
+
+        function getWeatherEmoji(weatherID){
+
+        }
+
+        function displayError(message) {
+            const errorDisplay = document.createElement("p");
+            errorDisplay.textContent = message;
+            errorDisplay.classList.add("errorDisplay");
+
+            card.textContent = "";
+            card.style.display = "flex";
+            card.appendChild(errorDisplay);
+        }
+    </script>
+    
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Podaj miasto">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div class="card" style="display: none;">
+    </div>
+</body>
 </html>
