@@ -66,6 +66,9 @@
 					placeholder="Podaj miasto"
 					class="form-control input-sm col"
 					aria-label="Szukaj"
+					onkeypress="if(event.keyCode === 13) {
+						console.error('You have pressed Enter key, use submit button instead'); 
+						return false;}"
 				/>
 				<button onclick="getData()" type="button" class="btn btn-primary col">Szukaj</button>
 			</form>
@@ -83,8 +86,10 @@
 				<br>
 				<p id="InfoPM10"><strong>PM 10</strong> - to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – jednym słowem, rakotwórcze metale ciężkie. Norma: 20 mikrogramów na metr sześcienny</p>
 			</div>
+			<br />
+			<br />
 		</div>
-		<footer class="fixed-bottom">
+		<footer class="fixed-bottom footer">
 			<a
 				href="https://pl.freepik.com/ikona/hipoalergiczny_4343634#fromView=search&page=1&position=39&uuid=5f46ebcb-2f52-4402-905d-bfc58faa23a9"
 			>

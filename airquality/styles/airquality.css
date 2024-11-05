@@ -33,17 +33,6 @@ body {
 	margin: 10px;
 	font-size: 1.5rem;
 }
-footer {
-	position: absolute;
-	align-items: bottom;
-	background-color: #2f2f2f;
-	color: #f2f2f2;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-	margin-top: auto; /* Przesuwa stopkę na dół */
-	width: 100%;
-}
 
 .card2 {
     flex-direction: column;
