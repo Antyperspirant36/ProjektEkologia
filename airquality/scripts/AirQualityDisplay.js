@@ -90,6 +90,7 @@ async function getAirPollutionData(lat, lon, cityName) {
         // Make the .card element visible
         document.querySelector('.card1').style.display = 'flex';
         document.querySelector('.card2').style.display = 'flex';
+        document.querySelector('card2').style.flextDirection = 'column';
     } catch (error) {
         console.log('Błąd w pobieraniu danych o jakości powietrza:', error);
     }

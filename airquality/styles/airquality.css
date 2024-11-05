@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
+    background-color: #f2f2f2;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -23,7 +24,9 @@ body {
 	padding: 50px;
 }
 .card1 h1 {
-	margin: 10px;
+	margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
 	font-size: 3rem;
 }
 .card1 p {
@@ -40,6 +43,19 @@ footer {
 	padding: 20px;
 	margin-top: auto; /* Przesuwa stopkę na dół */
 	width: 100%;
+}
+
+.card2 {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    margin: 50px;
+    padding: 50px;
 }
 
 @media screen and (max-width: 768px) {
