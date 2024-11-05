@@ -2,6 +2,7 @@ const apiKey = '6f8c6c7c361c24c67487eafa3c9fd48d';
 
 function getData() {
     const city = document.getElementById('cityInput').value;
+    document.getElementById('cityInput').value = '';
     getCityCoordinates(city);
 }
 
