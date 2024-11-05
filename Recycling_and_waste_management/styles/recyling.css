@@ -21,28 +21,28 @@ body {
 }
 
 .main {
-    background-color: #f2f2f2;
-    padding: 40px; /* Zmniejsz padding z 70px na 40px */
-    width: 100%;
-    min-height: 10vh;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-color: #f2f2f2;
+	padding: 40px; /* Zmniejsz padding z 70px na 40px */
+	width: 100%;
+	min-height: 20vh;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .animation {
-    background-image: url("images/truck.png");
-    background-repeat: no-repeat;
-    width: 10%;
-    height: 12%;
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    animation: animationMove 15s infinite linear, fadeIn 1s forwards;
-    cursor: default;
+	background-image: url("images/truck.png");
+	background-repeat: no-repeat;
+	width: 10%;
+	height: 12%;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	animation: animationMove 15s infinite linear, fadeIn 1s forwards;
+	cursor: default;
 }
 
 .recycling-text {
@@ -86,41 +86,42 @@ body {
 		opacity: 1;
 	}
 }
-.description h2{
-    color: #5BC980;
+.description h2 {
+	color: #5bc980;
 }
 .Symboles {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 }
 .Symboles img {
-    width: 5%;
-    height: 5%;
-    transition: all 1.2s;
+	width: 5%;
+	height: 5%;
+	transition: all 1.2s;
 }
-.obraz:hover{
-    transform: scale(1.2,1.2) rotate(15deg);
-    transition: all 1.2s;
+.obraz:hover {
+	transform: scale(1.2, 1.2) rotate(15deg);
+	transition: all 1.2s;
 }
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    font-size: 160%;
-    color: teal;
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	font-size: 160%;
+	color: teal;
 }
-#description h2,h4{
-    margin: 15px;
+#description h2,
+h4 {
+	margin: 15px;
 }
-#description{
-    margin-top: 20px;
+#description {
+	margin-top: 20px;
 }
