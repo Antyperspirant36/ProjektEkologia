@@ -2,22 +2,11 @@ body {
 	margin: 0;
 	background-color: #f2f2f2;
 	overflow: hidden;
+	height: 100vh;
 	--almostblack: #2f2f2f;
 	--coolwhite: #f2f2f2;
 }
 
-footer {
-	background-color: var(--almostblack);
-
-	height: 4.3vw;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	margin: 0;
-	a {
-		color: var(--coolwhite);
-	}
-}
 h3 {
 	margin: 0;
 }
