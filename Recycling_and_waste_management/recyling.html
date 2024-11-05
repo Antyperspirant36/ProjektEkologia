@@ -4,22 +4,55 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="/images/logo.png" />
-		<link rel="stylesheet" href="styles/recyling.css"/> <!--Wyswietlanie strony komputer diff pxXpx-->
-		<link rel="stylesheet" href="/navbar.css" />
-
+		<link rel="stylesheet" href="styles/recyling.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
 		<title>Recykling i zarządzanie odpadami</title>
 	</head>
 	<body>
-		<nav class="navbar">
-			<img class="logo" src="/images/logo.png" alt="logo" title="logo" />
-			<ul>
-				<a href="/index.html"><li class="siteanother">Strona Główna</li></a>
-				<a href="/airquality/airquality.html"><li class="siteanother">Jakość Powietrza</li></a>
-				<a href="recyling.html"><li class="siteanother selected">Recykling</li></a>
-				<a><li class="siteanother">dddd</li></a>
-				<a><li class="siteanother">eeee</li></a>
-				<a><li class="siteanother">ffff</li></a>
-			</ul>
+		<nav class="navbar navbar-expand-sm bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><img src="/images/logo.png" class="d-block" width="30px" /></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">Strona Główna</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="airquality/airquality.html">Jakość Powietrza</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="Recycling_and_waste_management/recyling.html"
+								>Recykling</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">dddd</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">eeee</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">ffff</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 
 		<div class="main">
@@ -30,29 +63,63 @@
 		</div>
 		<div class="content">
 			<div class="Symboles">
-				<img src="images/paperWaste.png" alt="paperWaste" title="paper Waste" class="obraz" onclick="pokaz(0)"/>
-				<img src="images/plasticWaste.png" alt="plasticWaste" title="plastic Waste" class="obraz" onclick="pokaz(1)"/>
-				<img src="images/glassWaste.png" alt="glassWaste" title="glass Waste" class="obraz" onclick="pokaz(2)"/>
-				<img src="images/metalWaste.png" alt="metalWaste" title="metal Waste" class="obraz" onclick="pokaz(3)"/>
-				<img src="images/organicWaste.png" alt="organicWaste" title="organic Waste" class="obraz" onclick="pokaz(4)"/>
-				<img src="images/Ewaste.png" alt="ElectronicWaste" title="Electronic Waste" class="obraz" onclick="pokaz(5)"/>
-				<img src="images/medWaste.png" alt="medicalWaste" title="medical Waste" class="obraz" onclick="pokaz(6)"/>
+				<img
+					src="images/paperWaste.png"
+					alt="paperWaste"
+					title="paper Waste"
+					class="obraz"
+					onclick="pokaz(0)"
+				/>
+				<img
+					src="images/plasticWaste.png"
+					alt="plasticWaste"
+					title="plastic Waste"
+					class="obraz"
+					onclick="pokaz(1)"
+				/>
+				<img
+					src="images/glassWaste.png"
+					alt="glassWaste"
+					title="glass Waste"
+					class="obraz"
+					onclick="pokaz(2)"
+				/>
+				<img
+					src="images/metalWaste.png"
+					alt="metalWaste"
+					title="metal Waste"
+					class="obraz"
+					onclick="pokaz(3)"
+				/>
+				<img
+					src="images/organicWaste.png"
+					alt="organicWaste"
+					title="organic Waste"
+					class="obraz"
+					onclick="pokaz(4)"
+				/>
+				<img
+					src="images/Ewaste.png"
+					alt="ElectronicWaste"
+					title="Electronic Waste"
+					class="obraz"
+					onclick="pokaz(5)"
+				/>
+				<img
+					src="images/medWaste.png"
+					alt="medicalWaste"
+					title="medical Waste"
+					class="obraz"
+					onclick="pokaz(6)"
+				/>
 			</div>
 			<div id="description">
-				<h2 id="h2">
-					Recykling i zarządzanie odpadmi
-				</h2>
-				<h4 id="h4">
-					Recykling co to jest?
-				</h4>
-				<h4 id="h5">
-					Wybierz jedną z powyższych opcji i przekonaj się jak segregować swoje śmieci.
-				</h4>
+				<h2 id="h2">Recykling i zarządzanie odpadmi</h2>
+				<h4 id="h4">Recykling co to jest?</h4>
+				<h4 id="h5">Wybierz jedną z powyższych opcji i przekonaj się jak segregować swoje śmieci.</h4>
 			</div>
 			<div class="Articles">
-				<div class="article">
-					
-				</div>
+				<div class="article"></div>
 			</div>
 		</div>
 		<footer>
@@ -64,5 +131,10 @@
 		</footer>
 		<script src="scripts/recyling.js"></script>
 		<script src="/animation.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
