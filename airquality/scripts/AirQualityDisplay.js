@@ -64,3 +64,4 @@ async function getAirPollutionData(lat, lon, cityName) {
         console.log('Błąd w pobieraniu danych o jakości powietrza:', error);
     }
 }
+/******  774a0fe0-9f96-41cc-a4b9-21ef8f0b38d6  *******/
