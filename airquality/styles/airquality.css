@@ -1,20 +1,44 @@
 body{
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #icon {
-    width: 8%;
-    height: 8%;
-    margin: 0;
-
+    width: 12%;
+    height: 12%;
+    margin-top: 20px;
+    border: 1px solid #2f2f2f;
+    border-radius: 90px;
 }
-.card{
+.card1{
     flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 40px;
     border: none;
+    border-radius: 40px;
+    margin: 50px;
+    padding: 50px;
+}
+.card1 h1{
+    margin: 10px;
+    font-size: 3rem;
+}
+.card1 p{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+footer {
+    position: absolute;
+    align-items: bottom;
+    background-color: #2f2f2f;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: auto; /* Przesuwa stopkę na dół */
+    width: 100%;
 }

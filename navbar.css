@@ -13,3 +13,8 @@ nav {
 		background-color: #2f2f2f;
 	}
 }
+footer{
+	display:flex;
+	position: relative;
+	bottom: 0;
+}

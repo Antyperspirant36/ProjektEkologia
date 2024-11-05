@@ -67,20 +67,29 @@ async function getAirPollutionData(lat, lon, cityName) {
             4: "Sad",
             5: "Angry"
         };
+        const airQualityBackground = {
+            1: "linear-gradient(33deg, rgba(34,195,63,1) 12%, rgba(172,227,13,1) 100%)", // very happy
+            2: "linear-gradient(33deg, rgba(129,195,34,1) 12%, rgba(204,227,13,1) 100%)", // happy
+            3: "linear-gradient(33deg, rgba(195,177,34,1) 12%, rgba(227,135,13,1) 100%)", // neutral
+            4: "linear-gradient(33deg, rgba(195,101,34,1) 12%, rgba(227,174,13,1) 100%)",  // sad
+            5: "linear-gradient(33deg, rgba(195,77,34,1) 12%, rgba(227,13,13,1) 100%)"    // angry
+        };
 
-        // Update the HTML with the city name, air quality index, and CO2 level
+        // Update the HTML with the city name, air quality index, and pollution levels
         document.getElementById('cityDisplay').innerHTML = cityName;
         document.getElementById('airDisplay').innerHTML = `Jakość powietrza: <strong>${airQualityText[airQualityIndex]}</strong>`;
         document.getElementById('PM25').innerHTML = `Zanieczyszczenie PM 2.5: <strong>${components.pm2_5}</strong>`;
-        document.getElementById('PM10').innerHTML = `Zanieczyszczenie PM 10: <strong>${components.pm10}</strong`;
+        document.getElementById('PM10').innerHTML = `Zanieczyszczenie PM 10: <strong>${components.pm10}</strong>`;
         document.getElementById('icon').src = airQualityImage[airQualityIndex];
         document.getElementById('icon').title = airQualityTitle[airQualityIndex];
         document.getElementById('icon').alt = airQualityTitle[airQualityIndex];
 
+        // Set the gradient background based on the air quality
+        document.querySelector('.card1').style.background = airQualityBackground[airQualityIndex];
+
         // Make the .card element visible
-        document.querySelector('.card').style.display = 'flex';
+        document.querySelector('.card1').style.display = 'flex';
     } catch (error) {
         console.log('Błąd w pobieraniu danych o jakości powietrza:', error);
     }
 }
-/******  774a0fe0-9f96-41cc-a4b9-21ef8f0b38d6  *******/
