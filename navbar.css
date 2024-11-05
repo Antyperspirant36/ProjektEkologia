@@ -13,8 +13,9 @@ nav {
 		background-color: #2f2f2f;
 	}
 }
+
 footer {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	background-color: #2f2f2f;
 	color: #f2f2f2;

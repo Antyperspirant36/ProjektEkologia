@@ -66,6 +66,9 @@
 					placeholder="Podaj miasto"
 					class="form-control input-sm col"
 					aria-label="Szukaj"
+					onkeypress="if(event.keyCode === 13) {
+						console.error('You have pressed Enter key, use submit button instead'); 
+						return false;}"
 				/>
 				<button onclick="getData()" type="button" class="btn btn-primary col">Szukaj</button>
 			</form>
@@ -79,12 +82,22 @@
 			</div>
 
 			<div class="card2" style="display: none">
-				<p id="pm25">PM 2.5: </p>
-				<p id="InfoPM25">aerozole atmosferyczne (pył zawieszony) o średnicy nie większej niż 2,5 mikrometra, który zdaniem Światowej Organizacji Zdrowia jest najbardziej szkodliwy dla zdrowia człowieka spośród wszystkich zanieczyszczeń atmosferycznych. Norma: 25 mikrogramów na metr sześcienny</p>
-				<br>
-				<p id="pm10">PM 10:</p>
-				<p id="InfoPM10">to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – jednym słowem, rakotwórcze metale ciężkie. Norma: 20 mikrogramów na metr sześcienny</p>
+				<p id="pm25">PM 2.5:&nbsp</p>
+				<p id="InfoPM25">
+					to aerozol atmosferyczny (pył zawieszony) o średnicy nie większej niż 2,5 mikrometra, który
+					zdaniem Światowej Organizacji Zdrowia jest najbardziej szkodliwy dla zdrowia człowieka spośród
+					wszystkich zanieczyszczeń atmosferycznych. Norma: 25 mikrogramów na metr sześcienny
+				</p>
+				<br />
+				<p id="pm10">PM 10:&nbsp</p>
+				<p id="InfoPM10">
+					to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10
+					mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany,
+					dioksyny – jednym słowem, rakotwórcze metale ciężkie. Norma: 20 mikrogramów na metr sześcienny
+				</p>
 			</div>
+			<br />
+			<br />
 		</div>
 		<footer class="fixed-bottom">
 			<a
