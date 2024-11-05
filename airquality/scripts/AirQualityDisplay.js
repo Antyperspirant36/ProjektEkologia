@@ -77,7 +77,7 @@ async function getAirPollutionData(lat, lon, cityName) {
         document.getElementById('icon').alt = airQualityTitle[airQualityIndex];
 
         // Make the .card element visible
-        document.querySelector('.card').style.display = 'block';
+        document.querySelector('.card').style.display = 'flex';
     } catch (error) {
         console.log('Błąd w pobieraniu danych o jakości powietrza:', error);
     }
