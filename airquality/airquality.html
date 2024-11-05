@@ -14,6 +14,7 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="/navbar.css" />
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm bg-body-tertiary">
@@ -33,13 +34,15 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="#">Strona Główna</a>
+							<a class="nav-link" aria-current="page" href="/index.html">Strona Główna</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="airquality/airquality.html">Jakość Powietrza</a>
+							<a class="nav-link active" href="#">Jakość Powietrza</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="Recycling_and_waste_management/recyling.html">Recykling</a>
+							<a class="nav-link" href="/Recycling_and_waste_management/recyling.html"
+								>Recykling</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">dddd</a>
@@ -55,10 +58,16 @@
 			</div>
 		</nav>
 
-		<div class="main">
+		<div class="mainInput">
 			<form class="weatherForm">
-				<input type="text" id="cityInput" placeholder="Podaj miasto" />
-				<button onclick="getData()" type="button">Szukaj</button>
+				<input
+					type="text"
+					id="cityInput"
+					placeholder="Podaj miasto"
+					class="form-control"
+					aria-label="Szukaj"
+				/>
+				<button onclick="getData()" type="button" class="btn btn-primary">Szukaj</button>
 			</form>
 
 			<div class="card" style="display: none">
