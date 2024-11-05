@@ -1,162 +1,161 @@
 body {
-    margin: 0;
-    background-color: #f2f2f2;
-    overflow: hidden;
-    --almostblack: #2f2f2f;
+	margin: 0;
+	background-color: #f2f2f2;
+	overflow: hidden;
+	--almostblack: #2f2f2f;
 }
-footer {
-    background-color: var(--almostblack);
 
-    height: 4.3vw;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    a {
-        color: greenyellow;
-    }
+footer {
+	background-color: var(--almostblack);
+
+	height: 4.3vw;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	a {
+		color: greenyellow;
+	}
 }
 h3 {
-    margin: 0;
+	margin: 0;
 }
 
 .cancelrep {
-    min-height: 5vh;
-    max-width: 27.5vw;
-    background-color: greenyellow;
-    padding: 2vw 2vh;
-    cursor: default;
-    font-size: 1.5vw;
-    transition: 0.5s;
-    color: var(--almostblack);
+	min-height: 5vh;
+	max-width: 27.5vw;
+	background-color: greenyellow;
+	padding: 2vw 2vh;
+	cursor: default;
+	font-size: 1.5vw;
+	transition: 0.5s;
+	color: var(--almostblack);
 }
 #aboutUS {
-    float: left;
-    animation: moveUS 1s;
-    border-radius: 0 0 2rem 0;
-    border: 0.5vw var(--almostblack) solid;
-    border-top: 0;
-    border-left: 0;
-    box-shadow: 0px 0px 20px var(--almostblack);
+	float: left;
+	animation: moveUS 1s;
+	border-radius: 0 0 2rem 0;
+	border: 0.5vw var(--almostblack) solid;
+	border-top: 0;
+	border-left: 0;
+	box-shadow: 0px 0px 20px var(--almostblack);
 }
 #aboutUS:hover {
-    background-color: var(--almostblack);
-    color: teal;
-    border-color: teal;
+	background-color: var(--almostblack);
+	color: teal;
+	border-color: teal;
 }
 @keyframes moveUS {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
 }
 #ourMISSION {
-    float: right;
-    animation: moveMISSION 1s;
-    border-radius: 0 0 0 2rem;
-    border: 0.5vw var(--almostblack) solid;
-    border-top: 0;
-    border-right: 0;
-    box-shadow: 0px 0px 20px var(--almostblack);
+	float: right;
+	animation: moveMISSION 1s;
+	border-radius: 0 0 0 2rem;
+	border: 0.5vw var(--almostblack) solid;
+	border-top: 0;
+	border-right: 0;
+	box-shadow: 0px 0px 20px var(--almostblack);
 }
 #ourMISSION:hover {
-    background-color: var(--almostblack);
-    color: teal;
-    border-color: teal;
+	background-color: var(--almostblack);
+	color: teal;
+	border-color: teal;
 }
 @keyframes moveMISSION {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
 }
 #aboutTHESITE {
-    margin: auto;
-    margin-top: 25vh;
-    animation: moveTHESITE 1s;
-    border-radius: 2rem;
-    border: 0.5vw var(--almostblack) solid;
-    box-shadow: 0px 0px 20px var(--almostblack);
+	margin: auto;
+	margin-top: 25vh;
+	animation: moveTHESITE 1s;
+	border-radius: 2rem;
+	border: 0.5vw var(--almostblack) solid;
+	box-shadow: 0px 0px 20px var(--almostblack);
 }
 #aboutTHESITE:hover {
-    background-color: teal;
+	background-color: teal;
 }
 @keyframes moveTHESITE {
-    from {
-        transform: translateY(75vh);
-    }
-    to {
-        transform: translateY(0%);
-    }
+	from {
+		transform: translateY(75vh);
+	}
+	to {
+		transform: translateY(0%);
+	}
 }
 
-@media only screen and (max-width: 480px) {
-    footer {
-        height: 10vh;
-        a {
-            color: teal;
-        }
-    }
-    h3 {
-        text-align: center;
-    }
-    .cancelrep {
-        background-color: #f2f2f2;
-        color: teal;
-        box-sizing: border-box;
-        max-width: none;
-        min-height: 23vh;
-        max-height: 25vh;
-        width: 100vw;
-        padding: 1vw 1vh;
-        font-size: 4.5vw;
-    }
-    #aboutUS {
-        float: none;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1.5vh teal solid;
-    }
-    #aboutUS:hover {
-        background-color: greenyellow;
-        color: var(--almostblack);
-        border-color: var(--almostblack);
-    }
-    #ourMISSION {
-        float: none;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1.5vh teal solid;
-    }
-    #ourMISSION:hover {
-        background-color: greenyellow;
-        color: var(--almostblack);
-        border-color: var(--almostblack);
-    }
-    #aboutTHESITE {
-        margin: 0;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1.5vh teal solid;
-    }
-    #aboutTHESITE:hover {
-        background-color: greenyellow;
-        color: var(--almostblack);
-        border-color: var(--almostblack);
-    }
-    @keyframes moveTHESITE {
-        from {
-            transform: translateX(-100%);
-        }
-        to {
-            transform: translateX(0%);
-        }
-    }
+@media only screen and (max-width: 575px) {
+	footer {
+		height: 10vh;
+		a {
+			color: teal;
+		}
+	}
+	h3 {
+		text-align: center;
+	}
+	.cancelrep {
+		background-color: #f2f2f2;
+		color: teal;
+		box-sizing: border-box;
+		max-width: none;
+		width: 100vw;
+		padding: 1vw 1vh;
+		font-size: 4.5vw;
+	}
+	#aboutUS {
+		float: none;
+		box-shadow: none;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1.5vh teal solid;
+	}
+	#aboutUS:hover {
+		background-color: greenyellow;
+		color: var(--almostblack);
+		border-color: var(--almostblack);
+	}
+	#ourMISSION {
+		float: none;
+		box-shadow: none;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1.5vh teal solid;
+	}
+	#ourMISSION:hover {
+		background-color: greenyellow;
+		color: var(--almostblack);
+		border-color: var(--almostblack);
+	}
+	#aboutTHESITE {
+		margin: 0;
+		box-shadow: none;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1.5vh teal solid;
+	}
+	#aboutTHESITE:hover {
+		background-color: greenyellow;
+		color: var(--almostblack);
+		border-color: var(--almostblack);
+	}
+	@keyframes moveTHESITE {
+		from {
+			transform: translateX(-100%);
+		}
+		to {
+			transform: translateX(0%);
+		}
+	}
 }
