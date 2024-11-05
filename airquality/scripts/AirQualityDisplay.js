@@ -52,11 +52,19 @@ async function getAirPollutionData(lat, lon, cityName) {
             4: "4 - Zła",
             5: "5 - Bardzo zła"
         };
+        const airQualityImage = {
+            1: "images/VeryHappy.png",
+            2: "images/Happy.png",
+            3: "images/Neutral.png",
+            4: "images/Sad.png",
+            5: "images/Angry.png"
+        };
 
         // Update the HTML with the city name, air quality index, and CO2 level
         document.getElementById('cityDisplay').innerHTML = cityName;
         document.getElementById('airDisplay').innerHTML = `Jakość powietrza: <strong>${airQualityText[airQualityIndex]}</strong>`;
         document.getElementById('carbon').innerHTML = `Zawartość dwutlenku węgla: ${components.co} µg/m³`;
+        document.getElementById('icon').src = airQualityImage[airQualityIndex];
 
         // Make the .card element visible
         document.querySelector('.card').style.display = 'block';
