@@ -3,6 +3,7 @@ body {
 	background-color: #f2f2f2;
 	overflow: hidden;
 	--almostblack: #2f2f2f;
+	--coolwhite: #f2f2f2;
 }
 
 footer {
@@ -14,7 +15,7 @@ footer {
 	bottom: 0;
 	margin: 0;
 	a {
-		color: greenyellow;
+		color: var(--coolwhite);
 	}
 }
 h3 {
@@ -97,7 +98,7 @@ h3 {
 
 @media only screen and (max-width: 575px) {
 	footer {
-		height: 10px;
+		height: 10vh;
 		a {
 			color: teal;
 		}
@@ -119,11 +120,11 @@ h3 {
 		box-shadow: none;
 		border-radius: 0;
 		border: none;
-		border-bottom: 1.5vh teal solid;
+		border-bottom: 1.5vh var(--almostblack) solid;
 	}
 	#aboutUS:hover {
-		background-color: greenyellow;
-		color: var(--almostblack);
+		background-color: var(--coolwhite);
+		color: teal;
 		border-color: var(--almostblack);
 	}
 	#ourMISSION {
@@ -131,11 +132,11 @@ h3 {
 		box-shadow: none;
 		border-radius: 0;
 		border: none;
-		border-bottom: 1.5vh teal solid;
+		border-bottom: 1.5vh var(--almostblack) solid;
 	}
 	#ourMISSION:hover {
-		background-color: greenyellow;
-		color: var(--almostblack);
+		background-color: var(--coolwhite);
+		color: teal;
 		border-color: var(--almostblack);
 	}
 	#aboutTHESITE {
@@ -143,11 +144,11 @@ h3 {
 		box-shadow: none;
 		border-radius: 0;
 		border: none;
-		border-bottom: 1.5vh teal solid;
+		border-bottom: 1.5vh var(--almostblack) solid;
 	}
 	#aboutTHESITE:hover {
-		background-color: greenyellow;
-		color: var(--almostblack);
+		background-color: var(--coolwhite);
+		color: teal;
 		border-color: var(--almostblack);
 	}
 	@keyframes moveTHESITE {
