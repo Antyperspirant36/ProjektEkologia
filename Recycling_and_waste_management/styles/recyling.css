@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	--almostBlack: #2f2f2f;
+	--coolWhite: #f2f2f2;
 }
 
 html,
@@ -9,119 +12,22 @@ body {
 	margin: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	overflow-x: hidden;
-	background-color: #f2f2f2;
 }
-
-.header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f2f2f2;
-	padding: 20px; /* Zmniejsz padding, aby uniknąć dużej przestrzeni u góry */
-}
-
-.main {
-	background-color: #f2f2f2;
-	padding: 40px; /* Zmniejsz padding z 70px na 40px */
-	width: 100%;
-	min-height: 20vh;
-	margin: 0 auto;
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.animation {
-	background-image: url("images/truck.png");
-	background-repeat: no-repeat;
-	width: 10%;
-	height: 12%;
-	position: absolute;
-	left: 0;
-	opacity: 0;
-	animation: animationMove 15s infinite linear, fadeIn 1s forwards;
-	cursor: default;
-}
-
-.recycling-text {
-	position: absolute;
-	top: 55px;
-	left: -150px;
-	font-size: 2rem;
-	color: #5bc980;
-	font-weight: bold;
-	opacity: 1;
-}
-
-/* Animacja poruszania się ciężarówki */
-@keyframes animationMove {
-	0% {
-		left: -18vw;
-		top: 5vh;
-	}
-	100% {
-		left: 90vw;
-		top: 5vh;
-	}
-}
-
-/* Animacja przesuwania napisu */
-@keyframes textMove {
-	0% {
-		left: -20%;
-	}
-	100% {
-		left: 100%;
-	}
-}
-
-/* Animacja stopniowego pojawiania się */
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-.description h2 {
-	color: #5bc980;
-}
-.Symboles {
-	padding: 30px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+.material {
+	background-color: var(--almostBlack);
+	color: var(--coolWhite);
 	cursor: pointer;
 }
-.Symboles img {
-	width: 5%;
-	height: 5%;
-	transition: all 1.2s;
-}
-.obraz:hover {
-	transform: scale(1.2, 1.2) rotate(15deg);
-	transition: all 1.2s;
-}
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	font-size: 160%;
-	color: teal;
+
+#buttons {
+	background-color: var(--coolWhite);
 }
 #description h2,
 h4 {
 	margin: 15px;
 }
 #description {
-	margin-top: 20px;
+	background-color: var(--coolWhite);
+	box-shadow: 0px 0px 10px 0px var(--almostBlack);
+	min-height: min-content;
 }

@@ -48,4 +48,6 @@ function pokaz(x) {
     document.getElementById("h2").innerHTML = `<strong>${dane[x].kategoria}</strong>`;
     document.getElementById("h4").innerHTML = dane[x].opis;
     document.getElementById("h5").innerHTML = dane[x].szczegoly;
+    document.getElementById("description").style.minHeight = "57.5vh";
+    document.getElementById("description").style.maxHeight = "90vh";
 }
