@@ -28,7 +28,7 @@ async function getCityCoordinates(cityName, stateCode = '', countryCode = '', li
         console.log(`Szerokość geograficzna: ${lat}`);
         console.log(`Długość geograficzna: ${lon}`);
 
-        getAirPollutionData(lat, lon, cityName); // Pass cityName to display it
+        getAirPollutionData(lat, lon, cityName);
     } catch (error) {
         console.log('Błąd w pobieraniu współrzędnych miasta:', error);
     }
@@ -45,7 +45,6 @@ async function getAirPollutionData(lat, lon, cityName) {
         const airQualityIndex = data.list[0].main.aqi;
         const components = data.list[0].components;
 
-        // Display air quality information based on the AQI
         const airQualityText = {
             1: "1 - Bardzo dobra",
             2: "2 - Dobra",
@@ -68,14 +67,13 @@ async function getAirPollutionData(lat, lon, cityName) {
             5: "Angry"
         };
         const airQualityBackground = {
-            1: "linear-gradient(33deg, rgba(34,195,63,1) 12%, rgba(172,227,13,1) 100%)", // very happy
-            2: "linear-gradient(33deg, rgba(129,195,34,1) 12%, rgba(204,227,13,1) 100%)", // happy
-            3: "linear-gradient(33deg, rgba(195,177,34,1) 12%, rgba(227,135,13,1) 100%)", // neutral
-            4: "linear-gradient(33deg, rgba(195,101,34,1) 12%, rgba(227,174,13,1) 100%)",  // sad
-            5: "linear-gradient(33deg, rgba(195,77,34,1) 12%, rgba(227,13,13,1) 100%)"    // angry
+            1: "linear-gradient(33deg, rgba(34,195,63,1) 12%, rgba(172,227,13,1) 100%)",
+            2: "linear-gradient(33deg, rgba(129,195,34,1) 12%, rgba(204,227,13,1) 100%)",
+            3: "linear-gradient(33deg, rgba(195,177,34,1) 12%, rgba(227,135,13,1) 100%)",
+            4: "linear-gradient(33deg, rgba(195,101,34,1) 12%, rgba(227,174,13,1) 100%)",
+            5: "linear-gradient(33deg, rgba(195,77,34,1) 12%, rgba(227,13,13,1) 100%)"
         };
 
-        // Update the HTML with the city name, air quality index, and pollution levels
         document.getElementById('cityDisplay').innerHTML = cityName;
         document.getElementById('airDisplay').innerHTML = `Jakość powietrza: <strong>${airQualityText[airQualityIndex]}</strong>`;
         document.getElementById('PM25').innerHTML = `Zanieczyszczenie PM 2.5: <strong>${components.pm2_5}</strong>`;
@@ -84,14 +82,34 @@ async function getAirPollutionData(lat, lon, cityName) {
         document.getElementById('icon').title = airQualityTitle[airQualityIndex];
         document.getElementById('icon').alt = airQualityTitle[airQualityIndex];
 
-        // Set the gradient background based on the air quality
         document.querySelector('.card1').style.background = airQualityBackground[airQualityIndex];
-
-        // Make the .card element visible
         document.querySelector('.card1').style.display = 'flex';
         document.querySelector('.card2').style.display = 'flex';
-        document.querySelector('card2').style.flextDirection = 'column';
+
+        displayAdvanced(components);
     } catch (error) {
         console.log('Błąd w pobieraniu danych o jakości powietrza:', error);
+    }
+}
+//Ta funkcja ma jakby dawac guzik i dzialac ale narazie nie dziala XD
+function displayAdvanced(components) {
+    const advancedSection = document.querySelector('Advanced');
+    const button = document.getElementById('btnAdvanced');
+
+    // Toggle visibility of the advanced section
+    if (advancedSection.style.display === 'none' || advancedSection.style.display === '') {
+        advancedSection.style.display = 'flex';
+        advancedSection.style.flexDirection = 'column';
+        button.textContent = "Ukryj szczegóły";
+
+        // Update the advanced pollution data
+        document.getElementById('carbon').innerHTML = `Zanieczyszczenie CO: <strong>${components.co}</strong>`;
+        document.getElementById('no2').innerHTML = `Zanieczyszczenie NO2: <strong>${components.no2}</strong>`;
+        document.getElementById('ozone').innerHTML = `Zanieczyszczenie O3: <strong>${components.o3}</strong>`;
+        document.getElementById('so2').innerHTML = `Zanieczyszczenie SO2: <strong>${components.so2}</strong>`;
+        document.getElementById('amonia').innerHTML = `Zanieczyszczenie NH3: <strong>${components.nh3}</strong>`;
+    } else {
+        advancedSection.style.display = 'none';
+        button.textContent = "Pokaż szczegóły";
     }
 }
