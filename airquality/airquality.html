@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/images/logo.png" />
+		<link rel="icon" type="image/x-icon" href="../images/logo.png" />
 		<title>Jakość Powietrza</title>
 		<script src="/animation.js" defer></script>
 		<script src="scripts/AirQualityDisplay.js"></script>
@@ -14,13 +14,13 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="/navbar.css" />
+		<link rel="stylesheet" href="../navbar.css" />
 	</head>
 	<body>
 		<?php include 'scripts/cookies.php'; ?>
 		<nav class="navbar navbar-expand-sm bg-body-tertiary">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#"><img src="/images/logo.png" class="d-block" width="30px" /></a>
+				<a class="navbar-brand" href="#"><img src="../images/logo.png" class="d-block" width="30px" /></a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -35,13 +35,13 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/index.html">Strona Główna</a>
+							<a class="nav-link" aria-current="page" href="../index.html">Strona Główna</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" href="#">Jakość Powietrza</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/Recycling_and_waste_management/recyling.html"
+							<a class="nav-link" href="../Recycling_and_waste_management/recyling.html"
 								>Recykling</a
 							>
 						</li>
@@ -80,8 +80,10 @@
 				<p id="PM25"></p>
 				<p id="PM10"></p>
 				<img src="images/VeryHappy.png" alt="VeryHappy" title="Very Happy" id="icon" />
-				<br>
-				<button class="btn btn-primary col" id="btnAdvanced" onclick="displayAdvanced(x)">Pokaż szczegóły</button>
+				<br />
+				<button class="btn btn-primary col" id="btnAdvanced" onclick="displayAdvanced(x)">
+					Pokaż szczegóły
+				</button>
 				<div class="Advanced" style="display: none">
 					<p id="carbon"></p>
 					<p id="no2"></p>
@@ -92,9 +94,19 @@
 			</div>
 
 			<div class="card2" style="display: none">
-				<p id="InfoPM25"><strong>PM 2.5</strong> - aerozole atmosferyczne (pył zawieszony) o średnicy nie większej niż 2,5 mikrometra, który zdaniem Światowej Organizacji Zdrowia jest najbardziej szkodliwy dla zdrowia człowieka spośród wszystkich zanieczyszczeń atmosferycznych. Norma: 25 mikrogramów na metr sześcienny</p>
-				<br>
-				<p id="InfoPM10"><strong>PM 10</strong> - to mieszanina zawieszonych w powietrzu cząsteczek, których średnica nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak benzopireny, furany, dioksyny – jednym słowem, rakotwórcze metale ciężkie. Norma: 20 mikrogramów na metr sześcienny</p>
+				<p id="InfoPM25">
+					<strong>PM 2.5</strong> - aerozole atmosferyczne (pył zawieszony) o średnicy nie większej niż
+					2,5 mikrometra, który zdaniem Światowej Organizacji Zdrowia jest najbardziej szkodliwy dla
+					zdrowia człowieka spośród wszystkich zanieczyszczeń atmosferycznych. Norma: 25 mikrogramów na
+					metr sześcienny
+				</p>
+				<br />
+				<p id="InfoPM10">
+					<strong>PM 10</strong> - to mieszanina zawieszonych w powietrzu cząsteczek, których średnica
+					nie przekracza 10 mikrometrów. Jest szkodliwy z uwagi na zawartość takich elementów jak
+					benzopireny, furany, dioksyny – jednym słowem, rakotwórcze metale ciężkie. Norma: 20
+					mikrogramów na metr sześcienny
+				</p>
 			</div>
 			<br />
 			<br />
