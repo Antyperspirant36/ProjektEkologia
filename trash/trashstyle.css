@@ -1,0 +1,6 @@
+.calendar-row {
+	height: 75px;
+	td {
+		width: 75px;
+	}
+}
