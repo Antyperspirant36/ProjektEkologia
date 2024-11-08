@@ -17,6 +17,7 @@ body {
 	background-color: var(--almostBlack);
 	color: var(--coolWhite);
 	cursor: pointer;
+	transition: background-color 0.5s, transform 0.5s;
 }
 
 #buttons {
@@ -29,5 +30,28 @@ h4 {
 #description {
 	background-color: var(--coolWhite);
 	box-shadow: 0px 0px 10px 0px var(--almostBlack);
-	min-height: min-content;
+}
+
+.material:hover {
+	transform: scale(1.1);
+}
+#b1:hover {
+	background-color: #00aafb;
+}
+#b2:hover, #b4:hover {
+	background-color: #f8d300;
+	color: var(--almostBlack);
+}
+#b3:hover {
+	background-color: #3ddd3d;
+}
+#b5:hover {
+	background-color: #5f330a;
+}
+#b6:hover {
+	background-color: silver;
+	color: var(--almostBlack);
+}
+#b7:hover {
+	background-color: red;
 }
