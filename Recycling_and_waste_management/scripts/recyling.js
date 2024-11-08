@@ -43,11 +43,25 @@ const dane = [
                     Biohazard (symbol biologiczny) <br>Opis: Odpady zakaźne. <br> Recykling: Nie. <br> Segregacja: Punkt utylizacji odpadów biologicznych.`
     },
 ];
+const colors = {
+    0: "linear-gradient(33deg, #00aafb 12%, #0099ea 100%)",
+    1: "linear-gradient(33deg, #f8d300 12%, #e7c200 100%)",
+    2: "linear-gradient(33deg, #3ddd3d 12%, #2ccc2c 100%)",
+    3: "linear-gradient(33deg, #f8d300 12%, #e7c200 100%)",
+    4: "linear-gradient(33deg, #5f330a 12%, #4e2209 100%)",
+    5: "linear-gradient(33deg, silver 12%, #b0b0b0 100%)",
+    6: "linear-gradient(33deg, red 12%, #ee0000 100%)",
+}
+
 
 function pokaz(x) {
     document.getElementById("h2").innerHTML = `<strong>${dane[x].kategoria}</strong>`;
     document.getElementById("h4").innerHTML = dane[x].opis;
     document.getElementById("h5").innerHTML = dane[x].szczegoly;
-    document.getElementById("description").style.minHeight = "57.5vh";
-    document.getElementById("description").style.maxHeight = "90vh";
+    document.getElementById("description").style.background = colors[x];
+    document.getElementById("description").style.boxShadow = "none";
+    document.getElementById("description").style.color = "var(--almostBlack)";
+    if(x==4) {
+        document.getElementById("description").style.color = "var(--coolWhite)";
+    }
 }
