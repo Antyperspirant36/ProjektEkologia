@@ -65,15 +65,15 @@
 					type="text"
 					id="cityInput"
 					placeholder="Podaj miasto"
-					class="form-control input-sm col"
+					class="form-control input-sm col color"
 					aria-label="Szukaj"
 					onkeypress="if(event.keyCode === 13) {
 						console.error('You have pressed Enter key, use submit button instead'); 
-						return false;}"
+						return false;
+						}"
 				/>
-				<button onclick="getData()" type="button" class="btn btn-primary col">Szukaj</button>
+				<button onclick="getData()" type="button" class="btn btn-dark col">Szukaj</button>
 			</form>
-
 			<div class="card1" style="display: none">
 				<h1 id="cityDisplay"></h1>
 				<p id="airDisplay"></p>
