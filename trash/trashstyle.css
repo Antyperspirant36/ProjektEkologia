@@ -1,6 +1,13 @@
 .calendar-row {
-	height: 75px;
-	td {
-		width: 75px;
-	}
+    height: 75px;
+    td {
+        width: 75px;
+    }
+}
+
+@media print {
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
 }
