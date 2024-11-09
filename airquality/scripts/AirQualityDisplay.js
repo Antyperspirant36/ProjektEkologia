@@ -114,3 +114,5 @@ function displayAdvanced(components) {
         button.textContent = "Pokaż szczegóły";
     }
 }
+
+window.onload = getCityCoordinates(localStorage.getItem('lastCity'));
