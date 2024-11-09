@@ -1,19 +1,19 @@
 .calendar-row {
-    height: 40px;
-    width: 40px;
-    td {
-        width: 40px;
-        text-align: center;
-    }
+	height: 40px;
+	width: 40px;
+	td {
+		width: 40px;
+		text-align: center;
+	}
 }
 
 .header-cell {
-    text-align: center;
+	text-align: center;
 }
 
 @media print {
-    .no-print,
-    .no-print * {
-        display: none !important;
-    }
+	.no-print,
+	.no-print * {
+		display: none !important;
+	}
 }

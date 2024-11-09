@@ -12,34 +12,33 @@ function createCalendar(year, month) {
     ];
 
     // Create header row with day names
-    let headerRow = '<tr class="calendar-header">';
-    daysOfWeek.forEach(day => headerRow += `<td class="header-cell">${day}</td>`);
-    headerRow += '</tr>';
-    calendar.innerHTML = headerRow;
+    const headerRow = daysOfWeek.map(day => `<td class="header-cell">${day}</td>`).join('');
+    calendar.innerHTML = `<tr class="calendar-header">${headerRow}</tr>`;
 
     // Start the calendar rows
-    let row = '<tr class="calendar-row">';
+    const calendarRows = [];
+    let row = [];
     let day;
 
     // Fill in the empty cells at the start of the month
     for (day = 0; day < firstDay; day++) {
-        row += '<td class="empty-cell"></td>';
+        row.push('<td class="empty-cell"></td>');
     }
 
     // Fill in the days of the month with click-to-cycle functionality
     for (let date = 1; date <= lastDate; date++) {
         const currentDay = (firstDay + date - 1) % 7;
         const weekendClass = (currentDay === 0 || currentDay === 6) ? 'weekend' : '';
-        row += `<td class="day-cell ${weekendClass}" data-date="${date}" data-image-index="0" data-clicks="0">${date}</td>`;
+        row.push(`<td class="day-cell ${weekendClass}" data-date="${date}" data-image-index="0" data-clicks="0">${date}</td>`);
 
         if (currentDay === 6) {  // Start a new row after Saturday
-            row += '</tr>';
-            if (date < lastDate) row += '<tr class="calendar-row">'; // Add a new row only if more dates are left
+            calendarRows.push(`<tr class="calendar-row">${row.join('')}</tr>`);
+            row = [];
         }
     }
 
-    row += '</tr>';
-    calendar.innerHTML += row;
+    calendarRows.push(`<tr class="calendar-row">${row.join('')}</tr>`);
+    calendar.innerHTML += calendarRows.join('');
 
     // Add click event listeners to each day cell
     addEventListeners(svgs);
@@ -47,33 +46,29 @@ function createCalendar(year, month) {
 
 // Function to add click event listeners
 function addEventListeners(svgs) {
-    document.querySelectorAll('.day-cell').forEach(cell => {
-        cell.addEventListener('click', () => {
-            // Get current click count and image index
-            let clickCount = parseInt(cell.dataset.clicks);
-            let currentIndex = parseInt(cell.dataset.imageIndex);
+    const cells = document.querySelectorAll('.day-cell');
+
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('click', function() {
+            const clickCount = parseInt(this.dataset.clicks);
+            const currentIndex = parseInt(this.dataset.imageIndex);
 
             if (clickCount < 3) {
-                // Change the content to the next SVG image
-                cell.innerHTML = svgs[currentIndex];
-                // Cycle to the next image index
-                cell.dataset.imageIndex = (currentIndex + 1) % svgs.length;
-            } else if (clickCount === 3) {
-                // Reset the cell to the number and reset click count
-                cell.innerHTML = cell.dataset.date;
-                cell.dataset.imageIndex = 0; // Reset the image index
-                cell.dataset.clicks = 0; // Reset the click counter
-                return; // Exit early to prevent incrementing after reset
+                this.innerHTML = svgs[currentIndex];
+                this.dataset.imageIndex = (currentIndex + 1) % svgs.length;
+            } else {
+                this.innerHTML = this.dataset.date;
+                this.dataset.imageIndex = 0;
+                this.dataset.clicks = 0;
+                return;
             }
 
-            // Increment the click count
-            cell.dataset.clicks = clickCount + 1;
+            this.dataset.clicks = clickCount + 1;
 
-            let table = document.getElementById('calendarz').innerHTML;
-            table = JSON.stringify(table);
-            localStorage.setItem("testTag", table);
-        });
-    });
+            const table = document.getElementById('calendarz').innerHTML;
+            localStorage.setItem("testTag", JSON.stringify(table));
+        }, false);
+    }
 }
 
 // Get the current month and year
