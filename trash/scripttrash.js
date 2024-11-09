@@ -41,7 +41,12 @@ function createCalendar(year, month) {
     row += '</tr>';
     calendar.innerHTML += row;
 
-    // Add click event listener to each day cell
+    // Add click event listeners to each day cell
+    addEventListeners(svgs);
+}
+
+// Function to add click event listeners
+function addEventListeners(svgs) {
     document.querySelectorAll('.day-cell').forEach(cell => {
         cell.addEventListener('click', () => {
             // Get current click count and image index
@@ -63,10 +68,29 @@ function createCalendar(year, month) {
 
             // Increment the click count
             cell.dataset.clicks = clickCount + 1;
+
+            let table = document.getElementById('calendarz').innerHTML;
+            table = JSON.stringify(table);
+            localStorage.setItem("testTag", table);
         });
     });
 }
 
 // Get the current month and year
 const today = new Date();
-createCalendar(today.getFullYear(), today.getMonth() + 1);
+
+if (localStorage.getItem("testTag")) {
+    document.getElementById('calendarz').innerHTML = JSON.parse(localStorage.getItem("testTag"));
+    addEventListeners([  // Restore event listeners with SVG data
+        `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="black" /></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="silver" /></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="brown" /></svg>`
+    ]);
+} else {
+    createCalendar(today.getFullYear(), today.getMonth() + 1);
+}
+
+const clearTable = () => {
+    localStorage.removeItem("testTag");
+    createCalendar(today.getFullYear(), today.getMonth() + 1);
+}
