@@ -76,7 +76,7 @@
 		</nav>
 
 		<div class="mainInput container p-3">
-			<form class="weatherForm row column-gap-3">
+			<form class="weatherForm row column-gap-3" onsubmit="return false">
 				<input
 					type="text"
 					id="cityInput"
@@ -84,8 +84,7 @@
 					class="form-control input-sm col color"
 					aria-label="Szukaj"
 					onkeypress="if(event.keyCode === 13) {
-						console.error('You have pressed Enter key, use submit button instead'); 
-						return false;
+						getData();
 						}"
 				/>
 				<button
