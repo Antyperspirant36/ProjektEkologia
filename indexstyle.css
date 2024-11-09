@@ -1,20 +1,21 @@
 html {
 	overflow-x: hidden;
 }
-
-#title {
+#bgimgmain {
 	background-image: url("images/index_forrest.jpg");
 	background-position: center;
 	background-size: cover;
+}
+#title {
 	color: white;
+	backdrop-filter: brightness(0.5);
 }
 
 #title-text {
 	font-weight: 900;
-	-webkit-text-stroke: 0.5px black;
+
 }
 
 #title-subtext {
 	font-weight: 600;
-	-webkit-text-stroke: 0.5px black;
 }
