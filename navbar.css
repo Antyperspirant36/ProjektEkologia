@@ -3,6 +3,7 @@
 	--bs-navbar-active-color: greenyellow;
 	--bs-navbar-hover-color: teal;
 	height: min-content;
+	--bs-navbar-toggler-focus-width: 0;
 }
 
 .navlink,

@@ -13,9 +13,12 @@ html {
 
 #title-text {
 	font-weight: 900;
-
 }
 
 #title-subtext {
 	font-weight: 600;
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }

@@ -8,10 +8,11 @@ function createCalendar(year, month) {
     // SVG icons for different types of waste
     const svgs = [
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="black" /></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="#7DA483" /></svg>`,
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="silver" /></svg>`,
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="brown" /></svg>`
     ];
-
+    
     // Create header row for days of the week
     const headerRow = daysOfWeek.map(day => `<td class="header-cell">${day}</td>`).join('');
     calendar.innerHTML = `<tr class="calendar-header">${headerRow}</tr>`;
@@ -56,7 +57,7 @@ function addEventListeners(svgs) {
             const currentIndex = parseInt(this.dataset.imageIndex);
 
             // Cycle through SVG icons on click
-            if (clickCount < 3) {
+            if (clickCount < svgs.length) {
                 this.innerHTML = svgs[currentIndex];
                 this.dataset.imageIndex = (currentIndex + 1) % svgs.length;
             } else {
@@ -83,6 +84,7 @@ if (localStorage.getItem("testTag")) {
     document.getElementById('calendarz').innerHTML = JSON.parse(localStorage.getItem("testTag"));
     addEventListeners([
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="black" /></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="#7DA483" /></svg>`,
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="silver" /></svg>`,
         `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="12" fill="brown" /></svg>`
     ]);
