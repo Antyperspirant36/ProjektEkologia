@@ -1,9 +1,8 @@
 .navbar-nav {
-	--bs-navbar-active-color: greenyellow;
-	--bs-navbar-hover-color: teal;
+	--bs-navbar-active-color: teal;
+	--bs-navbar-hover-color: rgb(93, 139, 25);
 	height: min-content;
 	--bs-navbar-toggler-focus-width: 0;
-	--bs-nav-link-color: #f2f2f2;
 }
 
 .btn-dark {

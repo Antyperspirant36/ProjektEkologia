@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 
-	--almostBlack: #2B3035;
+	--almostBlack: #2b3035;
 	--coolWhite: #f2f2f2;
 }
 
@@ -21,16 +21,15 @@ body {
 	transition: background-color 0.5s, transform 0.5s;
 }
 
-#buttons {
-	background-color: var(--coolWhite);
-}
 #description h2,
 h4 {
 	margin: 15px;
+	color: #212529;
 }
 #description {
 	background-color: var(--coolWhite);
 	box-shadow: 0px 0px 10px 0px var(--almostBlack);
+	color: #212529;
 }
 
 .material:hover {
