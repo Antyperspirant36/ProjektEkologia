@@ -14,7 +14,7 @@ function createCalendar(year, month) {
     ];
     
     // Create header row for days of the week
-    const headerRow = daysOfWeek.map(day => `<td class="header-cell">${day}</td>`).join('');
+    const headerRow = daysOfWeek.map(day => `<td class="header-cell table-active">${day}</td>`).join('');
     calendar.innerHTML = `<tr class="calendar-header">${headerRow}</tr>`;
 
     const calendarRows = [];
@@ -23,7 +23,7 @@ function createCalendar(year, month) {
 
     // Fill in the empty cells before the first day of the month
     for (day = 0; day < firstDay; day++) {
-        row.push('<td class="empty-cell"></td>');
+        row.push('<td class="empty-cell table-active"></td>');
     }
 
     // Populate the calendar with days and add data attributes for clicks and images
