@@ -1,3 +1,8 @@
+html,
+body {
+	height: 100vh;
+}
+
 .calendar-row {
 	height: 40px;
 	width: 40px;
