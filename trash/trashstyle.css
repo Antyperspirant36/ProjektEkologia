@@ -1,10 +1,11 @@
 .calendar-row {
 	height: 40px;
 	width: 40px;
-	td {
-		width: 40px;
-		text-align: center;
-	}
+}
+
+.calendar-row td {
+	width: 40px;
+	text-align: center;
 }
 
 .header-cell {

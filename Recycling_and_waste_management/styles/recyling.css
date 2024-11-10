@@ -1,59 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 
-    --almostBlack: #2f2f2f;
-    --coolWhite: #f2f2f2;
+	--almostBlack: #2f2f2f;
+	--coolWhite: #f2f2f2;
 }
 
 html,
 body {
-    margin: 0;
-    height: 100%;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
+	margin: 0;
+	height: 100%;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
 }
 .material {
-    background-color: var(--almostBlack);
-    color: var(--coolWhite);
-    cursor: pointer;
-    transition: background-color 0.5s, transform 0.5s;
+	background-color: var(--almostBlack);
+	color: var(--coolWhite);
+	cursor: pointer;
+	transition: background-color 0.5s, transform 0.5s;
 }
 
 #buttons {
-    background-color: var(--coolWhite);
+	background-color: var(--coolWhite);
 }
 #description h2,
 h4 {
-    margin: 15px;
+	margin: 15px;
 }
 #description {
-    background-color: var(--coolWhite);
-    box-shadow: 0px 0px 10px 0px var(--almostBlack);
+	background-color: var(--coolWhite);
+	box-shadow: 0px 0px 10px 0px var(--almostBlack);
 }
 
 .material:hover {
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 #b1:hover {
-    background-color: #00aafb;
+	background-color: #00aafb;
 }
 #b2:hover,
 #b4:hover {
-    background-color: #f8d300;
-    color: var(--almostBlack);
+	background-color: #f8d300;
+	color: var(--almostBlack);
 }
 #b3:hover {
-    background-color: #3ddd3d;
+	background-color: #3ddd3d;
 }
 #b5:hover {
-    background-color: #5f330a;
+	background-color: #5f330a;
 }
 #b6:hover {
-    background-color: silver;
-    color: var(--almostBlack);
+	background-color: silver;
+	color: var(--almostBlack);
 }
 #b7:hover {
-    background-color: red;
+	background-color: red;
 }

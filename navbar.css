@@ -15,10 +15,8 @@
 	--bs-btn-bg: #2f2f2f;
 }
 
-nav {
-	div {
-		background-color: #2f2f2f;
-	}
+nav div {
+	background-color: #2f2f2f;
 }
 
 html,
