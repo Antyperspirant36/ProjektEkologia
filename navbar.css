@@ -1,22 +1,13 @@
-.navbar {
-	--bs-navbar-padding-y: 0;
+.navbar-nav {
 	--bs-navbar-active-color: greenyellow;
 	--bs-navbar-hover-color: teal;
 	height: min-content;
 	--bs-navbar-toggler-focus-width: 0;
-}
-
-.navlink,
-.nav-item {
 	--bs-nav-link-color: #f2f2f2;
 }
 
 .btn-dark {
-	--bs-btn-bg: #2f2f2f;
-}
-
-nav div {
-	background-color: #2f2f2f;
+	--bs-btn-bg: #2b3035;
 }
 
 html,
@@ -27,7 +18,7 @@ body {
 
 .footer {
 	width: 100%;
-	background-color: #212529;
+	background-color: #2b3035;
 	color: white;
 	padding: 10px;
 	box-sizing: border-box;

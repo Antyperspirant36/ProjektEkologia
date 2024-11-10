@@ -9,7 +9,7 @@ body {
 #icon {
 	width: 12%;
 	margin-top: 20px;
-	border: 1px solid #2f2f2f;
+	border: 1px solid #2b3035;
 	border-radius: 90px;
 }
 .card1 {
@@ -53,8 +53,3 @@ body {
 	}
 }
 
-.popup {
-	width: 100px;
-	height: 100px;
-	background-color: wheat;
-}
