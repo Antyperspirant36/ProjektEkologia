@@ -52,3 +52,9 @@ body {
 		width: 20vw;
 	}
 }
+
+.popup {
+	width: 100px;
+	height: 100px;
+	background-color: wheat;
+}
