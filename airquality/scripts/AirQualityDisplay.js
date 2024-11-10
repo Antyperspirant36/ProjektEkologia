@@ -74,6 +74,13 @@ async function getAirPollutionData(lat, lon, cityName) {
 			4: "Sad",
 			5: "Angry",
 		};
+		const buttonClasses = {
+			1: "btn btn-success",
+			2: "btn btn-success",
+			3: "btn btn-warning",
+			4: "btn btn-danger",
+			5: "btn btn-danger",
+		}
 		const airQualityBackground = {
 			1: "linear-gradient(33deg, rgba(34,195,63,1) 12%, rgba(172,227,13,1) 100%)",
 			2: "linear-gradient(33deg, rgba(129,195,34,1) 12%, rgba(204,227,13,1) 100%)",
@@ -93,6 +100,7 @@ async function getAirPollutionData(lat, lon, cityName) {
 		document.getElementById("icon").title =
 			airQualityTitle[airQualityIndex];
 		document.getElementById("icon").alt = airQualityTitle[airQualityIndex];
+		document.getElementById('btnAdvanced').className = buttonClasses[airQualityIndex];
 
 		document.querySelector(".card1").style.background = 
             airQualityBackground[airQualityIndex];
