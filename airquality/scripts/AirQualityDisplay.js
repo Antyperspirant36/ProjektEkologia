@@ -108,15 +108,15 @@ async function getAirPollutionData(lat, lon, cityName) {
 		document.querySelector(".card2").style.display = "flex";
 		// Update the advanced pollution data
 		document.getElementById("carbon").innerHTML = 
-            `Zanieczyszczenie CO: <strong>${components.co}</strong>`;
+            `Zanieczyszczenie CO₂: <strong>${components.co}</strong>`;
 		document.getElementById("no2").innerHTML = 
-            `Zanieczyszczenie NO2: <strong>${components.no2}</strong>`;
+            `Zanieczyszczenie NO₂: <strong>${components.no2}</strong>`;
 		document.getElementById("ozone").innerHTML = 
-            `Zanieczyszczenie O3: <strong>${components.o3}</strong>`;
+            `Zanieczyszczenie O₃: <strong>${components.o3}</strong>`;
 		document.getElementById("so2").innerHTML = 
-            `Zanieczyszczenie SO2: <strong>${components.so2}</strong>`;
+            `Zanieczyszczenie SO₂: <strong>${components.so2}</strong>`;
 		document.getElementById("amonia").innerHTML = 
-            `Zanieczyszczenie NH3: <strong>${components.nh3}</strong>`;
+            `Zanieczyszczenie NH₃: <strong>${components.nh3}</strong>`;
 	} catch (error) {
 		console.log("Błąd w pobieraniu danych o jakości powietrza:", error);
 	}
