@@ -42,7 +42,7 @@ async function getCityCoordinates(
 }
 
 async function getAirPollutionData(lat, lon, cityName) {
-	const airURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+	const airURL = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
 	try {
 		const response = await fetch(airURL);
