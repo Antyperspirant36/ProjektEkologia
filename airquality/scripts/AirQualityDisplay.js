@@ -41,7 +41,6 @@ async function getCityCoordinates(
 	}
 }
 
-/*************  ✨ Codeium Command 🌟  *************/
 /**
  * Pobiera dane o zanieczyszczeniu powietrza w danym mieście
  * @param {number} lat - szerokość geograficzna
@@ -138,7 +137,6 @@ async function getAirPollutionData(lat, lon, cityName) {
 	}
 }
 
-/******  87d2ecf9-77e5-448d-8655-acfcc7650f68  *******/
 //Ta funkcja ma jakby dawac guzik i dzialac ale narazie nie dziala XD
 function displayAdvanced() {
 	const advancedSection = document.getElementById("Advanced");
