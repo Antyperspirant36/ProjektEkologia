@@ -13,7 +13,7 @@ async function getCityCoordinates(
 	countryCode = "",
 	limit = ""
 ) {
-	const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${apiKey}`;
+	const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${apiKey}`;
 
 	try {
 		const response = await fetch(geoURL);
