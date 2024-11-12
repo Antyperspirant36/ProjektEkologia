@@ -1,12 +1,30 @@
 const apiKey = "6f8c6c7c361c24c67487eafa3c9fd48d";
 let components;
+/**
+ * Retrieves city data and fetches its coordinates.
+ * Clears the input field and stores the city name in local storage.
+ */
 function getData() {
+	// Get the city name from the input field
 	const city = document.getElementById("cityInput").value;
+	
+	// Clear the input field
 	document.getElementById("cityInput").value = "";
+	
+	// Store the city name in local storage
 	localStorage.setItem("lastCity", city);
+	
+	// Fetch the coordinates for the specified city
 	getCityCoordinates(city);
 }
 
+/**
+ * Pobiera współrzędne geograficzne miasta
+ * @param {string} cityName - nazwa miasta
+ * @param {string} [stateCode=""] - kod stanu
+ * @param {string} [countryCode=""] - kod państwa
+ * @param {number} [limit=1] - liczba wyników
+ */
 async function getCityCoordinates(
 	cityName,
 	stateCode = "",
@@ -35,6 +53,7 @@ async function getCityCoordinates(
 		console.log(`Szerokość geograficzna: ${lat}`);
 		console.log(`Długość geograficzna: ${lon}`);
 
+		// Pobiera dane o zanieczyszczeniu powietrza
 		getAirPollutionData(lat, lon, cityName);
 	} catch (error) {
 		console.log("Błąd w pobieraniu współrzędnych miasta:", error);
@@ -137,23 +156,33 @@ async function getAirPollutionData(lat, lon, cityName) {
 	}
 }
 
-//Ta funkcja ma jakby dawac guzik i dzialac ale narazie nie dziala XD
+
+/**
+ * Toggles the visibility of the advanced section
+ */
 function displayAdvanced() {
+	// Get elements
 	const advancedSection = document.getElementById("Advanced");
 	const button = document.getElementById("btnAdvanced");
 
 	// Toggle visibility of the advanced section
 	if (
+		// Check if the section is currently hidden
 		advancedSection.style.display === "none" ||
 		advancedSection.style.display === ""
 	) {
+		// Show the section
 		advancedSection.style.display = "flex";
 		advancedSection.style.flexDirection = "column";
+		// Update the button text
 		button.textContent = "Ukryj szczegóły";
 	} else {
+		// Hide the section
 		advancedSection.style.display = "none";
+		// Update the button text
 		button.textContent = "Pokaż szczegóły";
 	}
 }
+
 //This function is called when the page is loaded, it gets the city coordinates from local storage and displays data for this city
 window.onload = getCityCoordinates(localStorage.getItem("lastCity"));
