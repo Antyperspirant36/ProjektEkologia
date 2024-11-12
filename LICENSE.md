@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Antoni Salamon, Krzysztof Buchalik, Karol Widenka, Antoni Dzid, Wiktor Wojak
+Copyright (c) 2024 Antoni Salamon, Krzysztof Buchalik, Karol Widenka
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (Projekt Ekologia), to deal
