@@ -60,7 +60,7 @@ function pokaz(x) {
     document.getElementById("h5").innerHTML = dane[x].szczegoly;
     document.getElementById("description").style.background = colors[x];
     document.getElementById("description").style.boxShadow = "none";
-    document.getElementById("description").style.color = "var(--almostBlack)";
+    document.getElementById("description").style.color = "var(--backgroundBlack)";
     if(x==4) {
         document.getElementById("description").style.color = "var(--coolWhite)";
     }
