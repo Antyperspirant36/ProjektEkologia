@@ -22,4 +22,8 @@ body {
 	.no-print * {
 		display: none !important;
 	}
+	:root,
+	[data-bs-theme="light"] {
+		--bs-body-bg: #fff;
+	}
 }

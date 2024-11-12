@@ -30,7 +30,9 @@
 	</head>
 	<body data-bs-theme="">
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+		<nav
+			class="navbar navbar-expand-md bg-body-tertiary fixed-top no-print"
+		>
 			<div class="container-fluid">
 				<a class="navbar-brand" href="../index.html"
 					><img src="../images/logo.png" width="30" alt="Logo strony"
@@ -101,13 +103,13 @@
 			<div class="container mx-auto p-2 no-print" style="width: 200px">
 				<button
 					type="button"
-					class="btn btn-secondary"
+					class="btn btn-secondary no-print"
 					onclick="clearTable()"
 				>
 					Usuń zapisane dane
 				</button>
 			</div>
-			<div class="ps-3 mb-5">
+			<div class="ps-3 mb-5" id="pospis">
 				<p>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -169,4 +171,3 @@
 		></script>
 	</body>
 </html>
-

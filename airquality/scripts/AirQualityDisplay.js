@@ -6,8 +6,8 @@ let components;
  */
 function getData() {
 	// Get the city name from the input field
-	const city = document.getElementById("cityInput").value;
-	
+	const cityNotEdited = document.getElementById("cityInput").value;
+	const city = cityNotEdited[0].toUpperCase() + cityNotEdited.substring(1);
 	// Clear the input field
 	document.getElementById("cityInput").value = "";
 	
@@ -23,7 +23,7 @@ function getData() {
  * @param {string} cityName - nazwa miasta
  * @param {string} [stateCode=""] - kod stanu
  * @param {string} [countryCode=""] - kod państwa
- * @param {number} [limit=1] - liczba wyników
+ * @param {number} [limit=""] - liczba wyników
  */
 async function getCityCoordinates(
 	cityName,
