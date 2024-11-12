@@ -41,6 +41,13 @@ async function getCityCoordinates(
 	}
 }
 
+/*************  ✨ Codeium Command 🌟  *************/
+/**
+ * Pobiera dane o zanieczyszczeniu powietrza w danym mieście
+ * @param {number} lat - szerokość geograficzna
+ * @param {number} lon - długość geograficzna
+ * @param {string} cityName - nazwa miasta
+ */
 async function getAirPollutionData(lat, lon, cityName) {
 	const airURL = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
@@ -53,6 +60,15 @@ async function getAirPollutionData(lat, lon, cityName) {
 		const airQualityIndex = data.list[0].main.aqi;
 		components = data.list[0].components;
 
+		/**
+		 * Mapa zanieczyszczenia powietrza
+		 * @typedef {Object} AirQuality
+		 * @property {number} [1] - Bardzo dobra
+		 * @property {number} [2] - Dobra
+		 * @property {number} [3] - Umiarkowana
+		 * @property {number} [4] - Zła
+		 * @property {number} [5] - Bardzo zła
+		 */
 		const airQualityText = {
 			1: "1 - Bardzo dobra",
 			2: "2 - Dobra",
@@ -121,6 +137,8 @@ async function getAirPollutionData(lat, lon, cityName) {
 		console.log("Błąd w pobieraniu danych o jakości powietrza:", error);
 	}
 }
+
+/******  87d2ecf9-77e5-448d-8655-acfcc7650f68  *******/
 //Ta funkcja ma jakby dawac guzik i dzialac ale narazie nie dziala XD
 function displayAdvanced() {
 	const advancedSection = document.getElementById("Advanced");
