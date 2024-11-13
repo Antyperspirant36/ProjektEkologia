@@ -185,4 +185,6 @@ function displayAdvanced() {
 }
 
 //This function is called when the page is loaded, it gets the city coordinates from local storage and displays data for this city
-window.onload = getCityCoordinates(localStorage.getItem("lastCity"));
+if (localStorage.getItem("lastCity")){
+	window.onload = getCityCoordinates(localStorage.getItem("lastCity"));
+}
