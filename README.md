@@ -4,16 +4,13 @@ Jest to projekt w ramach konkrusu "Hack Heroes 2024", ma na celu budowe świadom
 
 ## Opis
 
-Projekt "Projekt Ekologia" został stworzony z myślą o uświadomienie ludzi o zagrożeniu jakie wynika z nie dbania o naszą planete, przedstawia sposobu dbania o planate, jak i skutki nie dbania o nią.
+Projekt "Projekt Ekologia" został stworzony z myślą o uświadomienie ludzi o zagrożeniu jakie wynika z nie dbania o naszą planete, przedstawia sposobu dbania o planate, jak i skutki nie dbania o nią. Link: https://projektekologia.pl/
 
 ## Funkcje
 
  - Mapa czystości powietrza
  - Nauka o recyklingu i odpadach
- - Monitor śladu węglowego
- - Kalkulator oszczędności energii
- - System pomiaru zużycia wody
-
+ - Kalendarz wywozu śmieci
 
 ## Licencja
 
